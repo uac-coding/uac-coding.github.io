@@ -38,7 +38,7 @@ export default async function RootLayout({ children }) {
           // banner={banner}
           navbar={navbar}
           pageMap={await getPageMap()}
-          docsRepositoryBase="https://kylealvares.github.io/coding-club/docs"
+          docsRepositoryBase="https://github.com/uac-coding/uac-coding.github.io"
           // footer={footer}
           editLink={false}
           feedback={{ content: null }}

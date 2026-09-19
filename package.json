@@ -1,4 +1,5 @@
 {
+  "name": "uac-coding.github.io",
   "dependencies": {
     "lucide-react": "^0.562.0",
     "next": "^16.1.3",
