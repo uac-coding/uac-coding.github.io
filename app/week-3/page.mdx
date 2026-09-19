@@ -1,0 +1,306 @@
+import { Code, Form, Presentation } from 'lucide-react'
+
+# Week Three
+
+This week we learn how to make our programs **think and decide** using
+**booleans**, **comparisons**, and **conditionals**.
+
+By the end of this lesson, your code will be able to respond differently based on user input.
+
+## Presentation
+
+<GoogleSlides url="https://docs.google.com/presentation/d/e/2PACX-1vSp2bjR60Vl6PFP94lyu36ftv_x989-yn_owgtXkZ4kz9yeOCGZEhlbscoBeB1346n1xbwq2lRh7ew_/pubembed?start=false&loop=false&delayms=0" />
+
+## Review: Input & Conversion
+
+### Input
+
+You can use `input()` to ask the user for information.
+Whatever the user types is stored as **text**.
+
+```python copy
+name = input("What is your name? ")
+print(f"Hello {name}!")
+```
+
+### Converting Input
+
+If you want to work with numbers, you must convert the input first.
+
+```python copy
+age = int(input("Age: "))
+print(f"Next year you will be {age + 1}")
+```
+
+- `int()` converts text to a whole number
+- Without conversion, math will not work correctly
+
+<Callout type="warning">
+If the user types something that isn't a number, Python will show an error.
+</Callout>
+
+## Booleans
+
+A **boolean** is a value that can be only:
+
+- `True`
+- `False`
+
+Booleans are used to check conditions and make decisions.
+
+```python copy
+print(5 > 4) # True
+print(3 > 10)# False
+```
+
+## Comparison Operators
+
+Comparison operators compare two values and return a boolean.
+
+| Operator | Meaning| Example| Result |
+|---------|------------------|----------|--------|
+| `==`| Equal to | `5 == 5` | True |
+| `!=`| Not equal| `5 != 3` | True |
+| `>` | Greater than | `5 > 3`| True |
+| `<` | Less than| `3 < 5`| True |
+| `>=`| Greater or equal | `5 >= 5` | True |
+| `<=`| Less or equal| `3 <= 5` | True |
+
+Example in code:
+
+```python copy
+print(10 > 7)
+print(4 == 9)
+print(3 <= 3)
+```
+
+## Decisions in Real Life
+
+Programs make decisions the same way humans do.
+
+**Question:**
+What should we wear based on the weather?
+
+- If it's hot → t-shirt
+- Else if it's cool → light jacket
+- Else → heavy coat
+
+Conditionals turn these ideas into code.
+
+## Conditionals
+
+**Conditionals** let your program make decisions.
+
+Python uses:
+- `if`
+- `elif`
+- `else`
+
+### Basic If Statement
+
+```python copy
+age = int(input("How old are you? "))
+
+if age >= 13:
+print("You can join the coding club!")
+```
+
+- The code inside `if` runs **only if** the condition is `True`
+
+### If / Else
+
+```python copy
+age = int(input("How old are you? "))
+
+if age >= 13:
+print("Welcome!")
+else:
+print("Sorry, you are too young.")
+```
+
+- `else` runs when the condition is `False`
+
+### If / Elif / Else
+
+Use `elif` to check **multiple conditions**.
+
+```python copy
+temp = int(input("What's the temperature (°C)? "))
+
+if temp >= 25:
+print("Hot! Wear shorts and sunscreen.")
+elif temp >= 10:
+print("Cool. Grab a light jacket.")
+else:
+print("Cold! Bundle up with a heavy coat.")
+```
+
+Python checks conditions **from top to bottom** and stops when it finds a match.
+
+### Why Conditionals Matter
+
+Conditionals allow your programs to:
+
+- React to user input
+- Make choices
+- Behave differently in different situations
+
+<Callout type="info">
+If something unexpected happens, check your condition logic and indentation first.
+</Callout>
+
+## The `AND` Operator
+
+Sometimes one condition is **not enough**.  
+The **`and` operator** lets you check **multiple conditions at the same time**.
+
+For an `and` condition to be `True`:
+
+**ALL conditions must be true**
+
+If **any one** condition is false, the whole statement is false.
+
+### Real-Life Example
+
+You can go outside **if**: it is sunny **AND** you finish your homework **Both must be true**.
+
+### `AND` in Python
+
+```python copy
+print(5 > 3 and 10 > 7)   # True
+print(5 > 3 and 10 < 7)   # False
+```
+
+### Using `AND` in Conditionals
+
+```python copy
+grade = int(input("What grade are you in? "))
+
+if grade >= 6 and grade <= 12:
+    print("You can join the coding club!")
+else:
+    print("Sorry, you cannot join.")
+```
+
+In this example:
+- `grade >= 6` must be true  
+- `grade <= 12` must also be true  
+
+Only then does the program allow the student to join.
+
+### Why `AND` is Important
+
+The `and` operator lets your programs:
+
+- Make **more specific decisions**
+- Combine multiple rules
+- Prevent incorrect choices
+
+
+## Lesson Module
+
+<Tiles cols={1}>
+  <Tile
+    icon={<Presentation className="x:h-5 x:w-5" />}
+    title="Rock, Paper, Scissors"
+    subtitle="In this project you will make a Rock, Paper, Scissors game and play against the computer."
+    href="https://projects.raspberrypi.org/en/projects/rock-paper-scissors/0"
+  />
+</Tiles>
+
+## Activity: Choose Your Own Adventure (CYOA)
+
+Your goal is to build an **interactive, text-based choose your own adventure game**.
+
+<Steps>
+
+### Brainstorm
+
+Think about the story you want to write and fill out the handout.
+
+**Story Requirements**
+- Describe an opening scene
+- Ask the user for **Choice 1** (A or B)
+- Change the story based on Choice 1
+- Ask the user for **Choice 2** (A or B)
+- Show a final outcome based on **Choice 1 + Choice 2**
+
+**Code Requirements**
+- Use `input(...)` to get user choices
+- Use `if` / `elif`
+- Use `==` and `and` operators
+
+**Optional (Bonus)**
+- Use `else`
+- Use other comparators (`!=`, `<`, `>`)
+- Use additional concepts (e.g. `randint`, `datetime`, `int(...)`, math operators)
+- Add more choices (Note: Complexity grows quickly!)
+
+### Write the Code 
+
+<Tiles cols={1}>
+  <Tile
+    icon={<Code className="x:h-5 x:w-5" />}
+    title="Python Editor"
+    subtitle="Copy the template into the blank editor to begin."
+    href="https://editor.raspberrypi.org/en/projects/blank-python-starter"
+    newWindow
+  />
+</Tiles>
+
+```python copy filename="cyoa_template.py"
+# Choose your Own Adventure Program
+# Author: PUT YOUR NAME(S) HERE
+# Date: PUT THE DATE HERE
+
+# Opening scene
+print()
+print('<DESCRIBE THE OPENING SCENE>')
+print('What do you do?')
+choice1 = input('A: <CHOICE A>, B: <CHOICE B>')
+
+# Choice1 = A
+if (choice1 == 'A'):
+    print('<DESCRIBE WHAT HAPPENS NEXT>.')
+    print('What do you do?')
+    choice2 = input('A: <CHOICE A>, B: <CHOICE B>')
+# Choice2 = B
+elif (choice1 == 'B'):
+    print('<DESCRIBE WHAT HAPPENS NEXT>.')
+    print('What do you do?')
+    choice2 = input('A: <CHOICE A>, B: <CHOICE B>')
+
+# Choice1 = A, Choice2 = A
+if (choice1 == 'A' and choice2 == 'A'):
+    print('<DESCRIBE WHAT HAPPENS!')
+# Choice1 = A, Choice2 = B
+elif (choice1 == 'A' and choice2 == 'B'):
+    print('<DESCRIBE WHAT HAPPENS!')
+# Choice1 = B, Choice2 = A
+elif (choice1 == 'B' and choice2 == 'A'):
+    print('<DESCRIBE WHAT HAPPENS!')
+# Choice1 = B, Choice2 = A
+elif (choice1 == 'B' and choice2 == 'B'):
+    print('<DESCRIBE WHAT HAPPENS!')
+
+print()
+print('THE END')
+```
+
+### Submit Your Work
+
+<Tiles cols={1}>
+  <Tile
+    icon={<Form className="x:h-5 x:w-5" />}
+    title="Google Forms"
+    subtitle="Fill in your name and paste your code."
+    href="https://forms.gle/XJKs8VBed6DhMqmWA"
+    newWindow
+  />
+</Tiles>
+
+</Steps>
+
+### Example
+
+<CodeRunner url="https://trinket.io/embed/python3/c69db5f05999" />

@@ -1,0 +1,261 @@
+import { Presentation } from 'lucide-react'
+
+# Week Two
+
+This week we will introduce **modules**, **functions**, and **inputs**. 
+[Open today's coding module](https://projects.raspberrypi.org/en/projects/hello-world/editor)
+
+
+## Presentation
+
+<GoogleSlides url="https://docs.google.com/presentation/d/e/2PACX-1vRFiyxU1B9zPdRbrdr_tlyYMX5uZIU4xi0btaBH-nph6UfZl0UK0niz-9cyfvf4d9vgubxU3fN_7vNo/pubembed?start=false&loop=false&delayms=0" />
+
+## Definitions
+
+### Instructions / Commands
+
+Code is a set of instructions for the computer to follow. Each instruction tells the computer to do **one thing** at a time.
+
+```python copy
+print("Hello world")  # This tells the computer to show text
+```
+
+### Variables
+
+Variables are containers that store information like text or numbers. You can give them names and use them later.
+
+```python copy
+name = "Alice"
+age = 12
+print(f"{name} {age}")
+```
+
+### Data Types
+
+Different kinds of information are stored differently:
+
+- **Strings** = text `"Hello"`  
+- **Numbers** = integers or decimals `5`, `3.14`  
+- **Booleans** = True/False `True`
+
+```python copy
+message = "Hi there!"
+count = 5
+is_happy = True
+```
+
+### Comments
+
+Comments are notes for humans. The computer ignores them. In Python, start a comment with `#`.
+
+```python copy
+# This is a comment
+print("Hello")  # This prints Hello
+```
+
+### Functions
+
+Functions are blocks of code you can reuse. You “call” a function whenever you want the code to run.
+
+```python copy
+def greet():
+    print("Hello!")
+
+greet()  # Calls the function
+```
+
+### Print / Output
+
+`print()` shows information on the screen. It's how you check what your code is doing.
+
+```python copy
+print("This is output!")
+```
+
+### Simple Math
+
+Computers can calculate using Python operators: `+`, `-`, `*`, `/`.
+
+```python copy
+print(f"{5 + 3}")  # 8
+print(f"{10 / 2}") # 5.0
+```
+
+### Order Matters
+
+Computers follow instructions **line by line**, top to bottom. The order of your code affects the result.
+
+```python copy
+print("First line")
+print("Second line")
+```
+
+## Modules
+
+A **module** is a file that contains extra code you can use in your program. Modules let you use features that are already written, instead of creating everything from scratch.
+
+Python comes with many **built-in modules**.
+
+### Importing a Module
+
+To use a module, you must **import** it first.
+
+```python
+import random
+```
+
+This gives your program access to everything inside the `random` module.
+
+### Using a Module
+
+After importing, you use the module name followed by a dot `.` and the function you want.
+
+```python
+import random
+
+number = random.randint(1, 10)
+print(number)
+```
+
+- `random.randint(1, 10)` gives a random number between 1 and 10  
+
+### Another Example: Math Module
+
+The `math` module provides useful math functions.
+
+```python
+import math
+
+print(math.sqrt(16))   # 4.0
+print(math.pi)         # 3.141592653589793
+```
+
+### Importing Only What You Need
+
+You can import a specific part of a module instead of the whole thing.
+
+```python
+from datetime import datetime
+
+current_time = datetime.now()
+print(current_time)
+```
+
+This lets you use `datetime.now()` directly without writing `datetime.datetime.now()`.
+
+Importing only what you need can make your code shorter and easier to read.
+
+### Why Modules Matter
+
+- Save time
+- Keep code clean
+- Use powerful tools easily
+- Share code between programs
+
+## Functions
+
+A **function** is a named block of code that performs a task. Functions help you organize your code and reuse code instead of writing the same instructions again.
+
+### Function Syntax
+
+Functions in Python follow a specific structure:
+
+```python
+def function_name():
+    # code inside the function
+```
+
+- `def` tells Python you are defining a function  
+- `function_name` is the name you choose (use lowercase and underscores)  
+- The parentheses `()` are required  
+- The colon `:` tells Python the function code is starting  
+- All lines inside the function must be **indented**
+
+### Defining a Function
+
+```python
+def say_hello():
+    print("Hello!")
+```
+
+This defines the function but does not run it yet.
+
+### Indentation Matters
+
+Python uses **indentation** to know which lines belong to a function.
+
+```python
+def show_message():
+    print("This line is inside the function")
+print("This line is outside the function")
+```
+
+Only the indented line runs when the function is called.
+
+### Calling a Function
+
+To run a function, write its name followed by parentheses.
+
+```python
+say_hello()
+```
+
+The code inside the function runs from top to bottom.
+
+### Functions Can Have Multiple Lines
+
+```python
+def start_program():
+    print("Program starting...")
+    print("Loading...")
+    print("Ready!")
+
+start_program()
+```
+
+### Why Functions Are Useful
+
+- Organize code  
+- Reduce repetition  
+- Make programs easier to read  
+- Control when code runs  
+
+Functions group instructions together so you can use them whenever you need.
+
+## Input
+
+In Python, you can ask the user for information using the `input()` function.  
+Whatever the user types is stored as **text**.
+
+```python
+name = input("What is your name? ")
+print(f"Hello {name}!")
+```
+
+- The message inside `input("...")` is shown to the user as a **prompt**  
+- The value the user types is stored in a variable and can be used later  
+
+### Inputting Numbers
+
+Sometimes you want the user to enter numbers so your program can do calculations.  
+Because `input()` always gives text, you must **convert** it first.
+
+Use `int()` for whole numbers and `float()` for decimal numbers.
+
+```python
+age = int(input("How old are you? "))
+height = float(input("Enter your height in meters: "))
+```
+
+Now you can use the values in calculations:
+
+```python
+print(f"Next year, you will be {age + 1} years old.")
+print(f"Your height times 2 is {height * 2}")
+```
+
+- `int()` converts text into a whole number  
+- `float()` converts text into a decimal number  
+
+<Callout type="warning">If the user types something that is not a number, Python will show an error.</Callout>
+

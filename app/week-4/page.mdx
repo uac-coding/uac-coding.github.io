@@ -1,0 +1,268 @@
+import { Code, Form, Presentation, List } from 'lucide-react'
+
+# Week Four
+
+This week we learn how to **store multiple values** using **lists** and how to
+**access, modify, and check items** inside them.
+
+By the end of this lesson, your programs will be able to **remember more than one thing at a time**.
+
+## Presentation
+
+<GoogleSlides url="https://docs.google.com/presentation/d/e/2PACX-1vSe8K71uFs_i_3AOGCzI8tyxln1h8W_GQCKOCqQra28Ekcb97_CZWM6ho0bSUlS-DlekX4OvK7qxx9I/pubembed?start=false&loop=false&delayms=0" />
+
+## Variables vs. Lists
+
+### Single Variables
+
+A variable stores **one value**.
+
+```python copy
+name = "Alex"
+```
+
+If we want to store more than one name, this doesn't work very well.
+
+### Lists
+
+A **list** stores **many values** in one variable.
+
+```python copy
+names = ["Alex", "Jordan", "Sam"]
+```
+
+## Creating Lists
+
+Lists use **square brackets** `[]`.
+
+```python copy
+colors = ["red", "blue", "green"]
+```
+
+An empty list:
+
+```python copy
+items = []
+```
+
+<Callout type="info">
+Lists keep items in order. The order matters.
+</Callout>
+
+## Indexing Lists
+
+Each item in a list has a **position number** called an **index**.
+
+<Callout type="important">
+Indexes start at **0**.
+</Callout>
+
+```python copy
+colors = ["red", "blue", "green"]
+
+print(colors[0])  # red
+print(colors[1])  # blue
+print(colors[2])  # green
+```
+
+### Changing Items
+
+```python copy
+colors[1] = "yellow"
+print(colors)
+```
+
+Result:
+```
+['red', 'yellow', 'green']
+```
+
+<Callout type="warning">
+Using an index that doesn't exist will cause an error.
+</Callout>
+
+## List Length
+
+Use `len()` to find how many items are in a list.
+
+```python copy
+numbers = [3, 7, 2]
+print(len(numbers))
+```
+
+## Adding Items to a List
+
+You can add new colors to a list using `append()`.
+
+### `append()`
+
+`append()` adds an item to the **end** of a list.
+
+```python copy
+colors = ["red", "blue"]
+colors.append("green")
+print(colors)
+# ['red', 'blue', 'green']
+```
+
+After running this code:
+- `"green"` is added to the end of the list
+- The list now has **three colors**
+
+### Using Input to Add a Color
+
+You can also add a color using user input.
+
+```python copy
+colors = ["red", "blue"]
+
+new_color = input("Enter a color to add: ")
+colors.append(new_color)
+
+print(colors)
+```
+
+<Callout type="info">
+`append()` always adds the item to the end of the list.
+</Callout>
+
+## Comparing a List Item to a Value
+
+You can compare a **specific item in a list** to a value using its **index**.
+
+This lets your program make decisions based on **what is stored in the list**.
+
+### Example: Checking a List Item
+
+```python copy
+colors = ["red", "blue", "green"]
+
+if colors[0] == "red":
+    print("The first color is red!")
+```
+
+In this example:
+- `colors[0]` means **the first item**
+- The program compares it to `"red"`
+- If they match, the message prints
+
+### Using Input with List Indexes
+
+You can compare user input to an item in a list.
+
+```python copy
+answers = ["A", "B"]
+
+choice = input("Choose A or B: ")
+
+if choice == answers[0]:
+    print("You chose A!")
+elif choice == answers[1]:
+    print("You chose B!")
+```
+
+### Comparing Numbers in a List
+
+Lists can also store numbers.
+
+```python copy
+scores = [85, 92]
+
+if scores[1] >= 90:
+    print("High score!")
+```
+
+Here:
+- `scores[1]` is `92`
+- The condition checks if it is **greater than or equal to 90**
+
+<Callout type="info">
+Always make sure the index exists before comparing it.
+</Callout>
+
+## Classroom Example
+
+```python copy filename="classroom.py"
+# Make a list of fruits
+fruitlist = ["apple", "banana", "cherry"]
+
+# Print the list out
+print(fruitlist)
+
+# Each item in the list has an "index" - which is it's position in the list
+# In Python the index starts at 0, we acccess the item using square brackets and the position
+
+# Examples:
+# Print the first fruit in the list
+
+# Print the second fruit in the list
+
+# Print the third fruit in the list
+
+# What happens if I try to access an item in position 4?
+
+# How to add something at the end of the list?
+fruitlist.append("orange")
+
+# Print the entire list
+print(fruitlist)
+
+# Now try to acccess the item at position 4
+
+# Print how many fruit are in the list
+print(len(fruitlist))
+
+# To use len() to access last item in the list
+# print(fruitlist[len(fruitlist)-1])
+
+# https://www.w3schools.com/python/python_lists_methods.asp
+```
+
+## CYOA Template with Lists
+
+```python copy filename="cyoa_template.py"
+# Choose your Own Adventure Program
+# Author: PUT YOUR NAME(S) HERE
+# Date: PUT THE DATE HERE
+import random
+
+# Opening scene
+print()
+print(<DESCRIBE SCENE HERE>)
+print('What do you do?')
+choice1 = input('A: CHOICE1, B: CHOICE2')
+
+# Choice1 = A
+if (choice1 == 'A'):
+    print(<DESCRIBE SCENE HERE>)
+    choice2 = input('A: CHOICE1, B: CHOICE2')
+# Choice2 = B
+elif (choice1 == 'B'):
+    print(<DESCRIBE SCENE HERE>)
+    print('What do you do?')
+    choice2 = input('A: CHOICE1, B: CHOICE2')
+
+# Choice1 = A, Choice2 = A
+if (choice1 == 'A' and choice2 == 'A'):
+    print(<DESCRIBE SCENE HERE>)
+# Choice1 = A, Choice2 = B
+elif (choice1 == 'A' and choice2 == 'B'):
+    print(<DESCRIBE SCENE HERE>)
+# Choice1 = B, Choice2 = A
+elif (choice1 == 'B' and choice2 == 'A'):
+    print(<DESCRIBE SCENE HERE>)
+# Choice1 = B, Choice2 = A
+elif (choice1 == 'B' and choice2 == 'B'):
+    print(<DESCRIBE SCENE HERE>)
+
+print()
+print('THE END')
+
+## Use list to store messages to output to user at the end of the game ##
+## Randomly output one ##
+message_list = [<MESSAGE1>,<MESSAGE2>,<MESSAGE3>]
+## I have 3 messages so generate an index between 0 and 2
+ix = random.randint(0, 2)
+## Print final message ##
+print(message_list[ix])
+```
