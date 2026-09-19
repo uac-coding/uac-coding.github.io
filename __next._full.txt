@@ -1,0 +1,225 @@
+1:"$Sreact.fragment"
+3:I[55169,["/coding-club/_next/static/chunks/ff1a16fafef87110.js","/coding-club/_next/static/chunks/133a980807f66185.js","/coding-club/_next/static/chunks/a0526a7d7cf62de7.js","/coding-club/_next/static/chunks/de3addb05091b513.js"],"TOCProvider"]
+4:I[769,["/coding-club/_next/static/chunks/ff1a16fafef87110.js","/coding-club/_next/static/chunks/133a980807f66185.js","/coding-club/_next/static/chunks/a0526a7d7cf62de7.js","/coding-club/_next/static/chunks/de3addb05091b513.js"],"Sidebar"]
+5:I[47486,["/coding-club/_next/static/chunks/ff1a16fafef87110.js","/coding-club/_next/static/chunks/133a980807f66185.js","/coding-club/_next/static/chunks/a0526a7d7cf62de7.js","/coding-club/_next/static/chunks/de3addb05091b513.js"],"ClientWrapper"]
+b:I[68027,["/coding-club/_next/static/chunks/ff1a16fafef87110.js","/coding-club/_next/static/chunks/d2be314c3ece3fbe.js"],"default"]
+:HL["/coding-club/_next/static/chunks/eb5c892a473915d3.css","style"]
+6:T1527,import { Calendar, Clock, GraduationCap, Users, MapPin, Navigation, Wifi, KeyRound } from 'lucide-react'
+
+# Welcome to Coding Club
+
+Heard of **Python** before? In Coding Club, you'll use this powerful language to create your own art, 
+animations, games, and more! 
+No experience needed! Learn to code, have fun, and make new friends along the way.
+
+This is a great chance to pick up real-world skills while having a blast and connecting with 
+other students who love to create and explore technology.
+
+![Coding Club Banner](/assets/coding-club.jpg)
+
+## Coding Club Information
+
+<Callout type='info'>
+**Required:**
+A laptop or mobile device capable of running an online coding platform, plus basic typing and computer navigation skills.  
+</Callout>
+
+The Coding Club runs from **January 14 to February 18, 2026**, on **Wednesdays from 5:00 to 6:00 PM**, 
+for students in **Grades 6 - 12**, and takes place in **Room 10 at Unionville Alliance Church**. 
+Pickup will be at the Youth Room Portable.
+
+**Optional**: Pizza dinner is available for all weeks at a cost of **$25**.
+
+### Meet the Instructors
+
+All of our instructors are volunteers, passionate about sharing their knowledge and helping you succeed.
+
+<div className='x:mt-4' />
+
+<ContactCards cols={3}>
+  <RoleCard
+    name="Shirley Hui"
+    role="Cancer Bioinformatics"
+    avatar="./assets/shirley-2.png"
+  />
+  <RoleCard
+    name="Kevin Leung"
+    role="Robotics and Automation"
+    avatar="./assets/kevin-4.png"
+  />
+  <RoleCard
+    name="Kyle Alvares"
+    role="Software Developer"
+    avatar="./assets/kyle-1.png"
+  />
+</ContactCards>
+
+
+### Connecting to the Network
+
+```sh filename="UAC Wifi Password" copy
+1faith!!
+```
+
+### Curriculum
+
+[Introduction to Python: Variables, functions, and loops](https://projects.raspberrypi.org/en/projects/hello-world/editor)
+
+<Tiles cols={1}>
+  <Tile
+    icon={<GraduationCap className="x:h-5 x:w-5" />}
+    title="Week 1: Hello World & Basics"
+    subtitle="Learn print statements, variables, data types, and comments."
+    href="/week-1"
+  />
+  <Tile
+    icon={<GraduationCap className="x:h-5 x:w-5" />}
+    title="Week 2: Modules, Functions & Input"
+    subtitle="Learn how to use reusable code and get input."
+    href="/week-2"
+  />
+  <Tile
+    icon={<GraduationCap className="x:h-5 x:w-5" />}
+    title="Week 3: Conditionals"
+    subtitle="Learn how to make decisions in code."
+    href="/week-3"
+  />
+  <Tile
+    icon={<GraduationCap className="x:h-5 x:w-5" />}
+    title="Week 4: Lists"
+    subtitle="Learn how to use a structured collection of items."
+    href="/week-4"
+  />
+  <Tile
+    icon={<GraduationCap className="x:h-5 x:w-5" />}
+    title="Week 5: Challenges"
+    subtitle="Test what you know by solving these challenges."
+    href="/week-5"
+  />
+</Tiles>
+
+
+---
+
+### Raspberry Pi Setup
+
+At Coding Club, you'll learn to code using a variety of free, beginner-friendly tools. One of these is the **Raspberry Pi Foundation's Code Editor**, where you can program in **Python**, **HTML**, and **CSS** while completing exciting projects from the Raspberry Pi Projects site.
+
+To save your projects, you'll need a **Raspberry Pi Foundation account**.  
+- If you're **13 or older**, you can create your own account.  
+- If you're **under 13**, ask a parent or guardian to set one up with you.
+
+![Raspberry Pi Organization](/assets/raspberry-pi.png)
+
+### How to Create Your Account
+
+1. Go to [projects.raspberrypi.org](https://projects.raspberrypi.org).  
+2. Click **Log in** in the top right corner.  
+3. On the login screen, click **Create one** (bottom of the box).  
+4. Select **Under 13**, if applicable.  
+5. Enter your **parent's email** and create a **username** for your child (avoid using their real name).  
+6. Complete the remaining fields and note the **username** and **password**.  
+7. **Verify the account** using the email sent to the address provided.  
+
+## Code of Conduct
+
+<Steps>
+
+### Be kind and respectful  
+Treat everyone with kindness in your words, actions, and body language. Listen when others are speaking, avoid interrupting, and help create a welcoming environment for everyone.
+
+### Use devices only for club activities  
+Keep phones, tablets, and other devices put away unless they're needed for a club project. This helps everyone stay focused and shows respect for the leaders and your peers.
+
+### Stay on approved websites  
+Only use websites related to Coding Club activities or instructions. Staying on approved sites keeps everyone safe and focused on creativity and learning together.
+
+</Steps>
+
+By following these guidelines, we can make Coding Club a fun, respectful, and creative space for everyone.
+
+
+## Helpful Tips
+
+- **Bring your laptop fully charged** so you're ready to code right away.
+- **Arrive** a few minutes **before 5:00 PM** so we can start on time.
+- **Review concepts from the previous week** before class to stay confident and keep up.
+- **Ask questions**, that's how we learn best!
+
+## Questions?
+
+For more details, visit the [UAC Home > Coding Club](https://uac.churchcenter.com/calendar/event/204535151) page.  
+Questions? Contact **Justin Hsu** at [justinh@uachome.org](mailto:justinh@uachome.org) or call [905‑477‑1554](tel:9054771554).
+
+<div className='x:mt-4' />
+
+<ContactCards cols={3}>
+  <RoleCard
+    name="Justin Hsu"
+    role="Organizer, Pastor of Youth & Young Adult Discipleship"
+    avatar="./assets/justin.webp"
+  />
+</ContactCards>0:{"P":null,"b":"uQNWKQecjgqGSzm_RNnG4","c":["",""],"q":"","i":false,"f":[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/coding-club/_next/static/chunks/eb5c892a473915d3.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/coding-club/_next/static/chunks/ff1a16fafef87110.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/coding-club/_next/static/chunks/133a980807f66185.js","async":true,"nonce":"$undefined"}],["$","script","script-2",{"src":"/coding-club/_next/static/chunks/a0526a7d7cf62de7.js","async":true,"nonce":"$undefined"}],["$","script","script-3",{"src":"/coding-club/_next/static/chunks/de3addb05091b513.js","async":true,"nonce":"$undefined"}]],"$L2"]}],{"children":[["$","$1","c",{"children":[["$","div",null,{"className":"x:mx-auto x:flex x:max-w-(--nextra-content-width)","children":["$","$L3",null,{"value":[{"value":"Coding Club Information","id":"coding-club-information","depth":2},{"value":"Meet the Instructors","id":"meet-the-instructors","depth":3},{"value":"Connecting to the Network","id":"connecting-to-the-network","depth":3},{"value":"Curriculum","id":"curriculum","depth":3},{"value":"Raspberry Pi Setup","id":"raspberry-pi-setup","depth":3},{"value":"How to Create Your Account","id":"how-to-create-your-account","depth":3},{"value":"Code of Conduct","id":"code-of-conduct","depth":2},{"value":"Be kind and respectful","id":"be-kind-and-respectful","depth":3},{"value":"Use devices only for club activities","id":"use-devices-only-for-club-activities","depth":3},{"value":"Stay on approved websites","id":"stay-on-approved-websites","depth":3},{"value":"Helpful Tips","id":"helpful-tips","depth":2},{"value":"Questions?","id":"questions","depth":2}],"children":[["$","$L4",null,{}],["$","$L5",null,{"metadata":{"title":"Welcome to Coding Club","filePath":"app/page.mdx","timestamp":1789861204000},"bottomContent":"$undefined","sourceCode":"$6","children":["$L7","$L8"]}]]}]}],null,"$L9"]}],{},null,false,false]},null,false,false],"$La",false]],"m":"$undefined","G":["$b",[]],"S":true}
+c:I[26579,["/coding-club/_next/static/chunks/ff1a16fafef87110.js","/coding-club/_next/static/chunks/133a980807f66185.js","/coding-club/_next/static/chunks/a0526a7d7cf62de7.js","/coding-club/_next/static/chunks/de3addb05091b513.js"],"ImageZoom"]
+d:I[63894,["/coding-club/_next/static/chunks/ff1a16fafef87110.js","/coding-club/_next/static/chunks/133a980807f66185.js","/coding-club/_next/static/chunks/a0526a7d7cf62de7.js","/coding-club/_next/static/chunks/de3addb05091b513.js"],"HeadingAnchor"]
+2c:I[97367,["/coding-club/_next/static/chunks/ff1a16fafef87110.js","/coding-club/_next/static/chunks/d2be314c3ece3fbe.js"],"OutletBoundary"]
+2d:"$Sreact.suspense"
+2f:I[97367,["/coding-club/_next/static/chunks/ff1a16fafef87110.js","/coding-club/_next/static/chunks/d2be314c3ece3fbe.js"],"ViewportBoundary"]
+31:I[97367,["/coding-club/_next/static/chunks/ff1a16fafef87110.js","/coding-club/_next/static/chunks/d2be314c3ece3fbe.js"],"MetadataBoundary"]
+7:["$","div",null,{"id":"nextra-skip-nav"}]
+8:["$","main",null,{"data-pagefind-body":true,"children":[["$","h1",null,{"id":"$undefined","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-bold x:mt-2 x:text-4xl","children":["Welcome to Coding Club","$undefined"]}],"\n",["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":["Heard of ",["$","strong",null,{"children":"Python"}]," before? In Coding Club, you’ll use this powerful language to create your own art,\nanimations, games, and more!\nNo experience needed! Learn to code, have fun, and make new friends along the way."]}],"\n",["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":"This is a great chance to pick up real-world skills while having a blast and connecting with\nother students who love to create and explore technology."}],"\n",["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":["$","$Lc",null,{"alt":"Coding Club Banner","placeholder":"blur","src":{"src":"/coding-club/_next/static/media/coding-club.85714051.jpg","width":2502,"height":1408,"blurWidth":8,"blurHeight":5,"blurDataURL":"data:image/jpeg;base64,/9j/4AAQSkZJRgABAgAAAQABAAD/wAARCAAFAAgDAREAAhEBAxEB/9sAQwAKBwcIBwYKCAgICwoKCw4YEA4NDQ4dFRYRGCMfJSQiHyIhJis3LyYpNCkhIjBBMTQ5Oz4+PiUuRElDPEg3PT47/9sAQwEKCwsODQ4cEBAcOygiKDs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDirK9jn0qeJ7OHyFiLrHjkMB69ce1em6nloc+0eXr3P//Z"}}]}],"\n",["$","h2",null,{"id":"coding-club-information","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-10 x:border-b x:pb-1 x:text-3xl nextra-border","children":["Coding Club Information",["$","$Ld",null,{"id":"coding-club-information"}]]}],"\n",["$","div",null,{"className":"nextra-callout x:overflow-x-auto x:not-first:mt-[1.25em] x:flex x:rounded-lg x:border x:py-[.5em] x:pe-[1em] x:contrast-more:border-current! x:bg-blue-100 x:dark:bg-blue-900/30 x:text-blue-700 x:dark:text-blue-400 x:border-blue-700 x:dark:border-blue-600","children":[["$","div",null,{"className":"x:select-none x:text-[1.25em] x:ps-[.6em] x:pe-[.4em]","style":{"fontFamily":"\"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\""},"data-pagefind-ignore":"all","children":["$","svg",null,{"viewBox":"0 0 16 16","fill":"currentColor","height":".8em","className":"x:mt-[.3em]","children":["$","path",null,{"d":"M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"}]}]}],["$","div",null,{"className":"x:w-full x:min-w-0","children":["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":[["$","strong",null,{"children":"Required:"}],"\nA laptop or mobile device capable of running an online coding platform, plus basic typing and computer navigation skills."]}]}]]}],"\n",["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":["The Coding Club runs from ",["$","strong",null,{"children":"January 14 to February 18, 2026"}],", on ","$Le",",\nfor students in ","$Lf",", and takes place in ","$L10",".\nPickup will be at the Youth Room Portable."]}],"\n","$L11","\n","$L12","\n","$L13","\n","$L14","\n","$L15","\n","$L16","\n","$L17","\n","$L18","\n","$L19","\n","$L1a","\n","$L1b","\n","$L1c","\n","$L1d","\n","$L1e","\n","$L1f","\n","$L20","\n","$L21","\n","$L22","\n","$L23","\n","$L24","\n","$L25","\n","$L26","\n","$L27","\n","$L28","\n","$L29","\n","$L2a","\n","$L2b"]}]
+9:["$","$L2c",null,{"children":["$","$2d",null,{"name":"Next.MetadataOutlet","children":"$@2e"}]}]
+a:["$","$1","h",{"children":[null,["$","$L2f",null,{"children":"$L30"}],["$","div",null,{"hidden":true,"children":["$","$L31",null,{"children":["$","$2d",null,{"name":"Next.Metadata","children":"$L32"}]}]}],null]}]
+33:I[93046,["/coding-club/_next/static/chunks/ff1a16fafef87110.js","/coding-club/_next/static/chunks/133a980807f66185.js","/coding-club/_next/static/chunks/a0526a7d7cf62de7.js","/coding-club/_next/static/chunks/de3addb05091b513.js"],"ContactCards"]
+34:I[93046,["/coding-club/_next/static/chunks/ff1a16fafef87110.js","/coding-club/_next/static/chunks/133a980807f66185.js","/coding-club/_next/static/chunks/a0526a7d7cf62de7.js","/coding-club/_next/static/chunks/de3addb05091b513.js"],"RoleCard"]
+35:I[40493,["/coding-club/_next/static/chunks/ff1a16fafef87110.js","/coding-club/_next/static/chunks/133a980807f66185.js","/coding-club/_next/static/chunks/a0526a7d7cf62de7.js","/coding-club/_next/static/chunks/de3addb05091b513.js"],"CopyToClipboard"]
+36:I[83987,["/coding-club/_next/static/chunks/ff1a16fafef87110.js","/coding-club/_next/static/chunks/133a980807f66185.js","/coding-club/_next/static/chunks/a0526a7d7cf62de7.js","/coding-club/_next/static/chunks/de3addb05091b513.js"],"ToggleWordWrapButton"]
+37:I[44644,["/coding-club/_next/static/chunks/ff1a16fafef87110.js","/coding-club/_next/static/chunks/133a980807f66185.js","/coding-club/_next/static/chunks/a0526a7d7cf62de7.js","/coding-club/_next/static/chunks/de3addb05091b513.js"],"Tiles"]
+38:I[44644,["/coding-club/_next/static/chunks/ff1a16fafef87110.js","/coding-club/_next/static/chunks/133a980807f66185.js","/coding-club/_next/static/chunks/a0526a7d7cf62de7.js","/coding-club/_next/static/chunks/de3addb05091b513.js"],"Tile"]
+39:I[22016,["/coding-club/_next/static/chunks/ff1a16fafef87110.js","/coding-club/_next/static/chunks/133a980807f66185.js","/coding-club/_next/static/chunks/a0526a7d7cf62de7.js","/coding-club/_next/static/chunks/de3addb05091b513.js"],""]
+e:["$","strong",null,{"children":"Wednesdays from 5:00 to 6:00 PM"}]
+f:["$","strong",null,{"children":"Grades 6 - 12"}]
+10:["$","strong",null,{"children":"Room 10 at Unionville Alliance Church"}]
+11:["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":[["$","strong",null,{"children":"Optional"}],": Pizza dinner is available for all weeks at a cost of ",["$","strong",null,{"children":"$$25"}],"."]}]
+12:["$","h3",null,{"id":"meet-the-instructors","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-8 x:text-2xl","children":["Meet the Instructors",["$","$Ld",null,{"id":"meet-the-instructors"}]]}]
+13:["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":"All of our instructors are volunteers, passionate about sharing their knowledge and helping you succeed."}]
+14:["$","div",null,{"className":"x:mt-4"}]
+15:["$","$L33",null,{"cols":3,"children":[["$","$L34",null,{"name":"Shirley Hui","role":"Cancer Bioinformatics","avatar":"./assets/shirley-2.png"}],["$","$L34",null,{"name":"Kevin Leung","role":"Robotics and Automation","avatar":"./assets/kevin-4.png"}],["$","$L34",null,{"name":"Kyle Alvares","role":"Software Developer","avatar":"./assets/kyle-1.png"}]]}]
+16:["$","h3",null,{"id":"connecting-to-the-network","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-8 x:text-2xl","children":["Connecting to the Network",["$","$Ld",null,{"id":"connecting-to-the-network"}]]}]
+17:["$","div",null,{"data-pagefind-ignore":"all","className":"nextra-code x:relative x:not-first:mt-[1.25em]","children":[["$","div",null,{"className":"x:px-4 x:text-xs x:text-gray-700 x:dark:text-gray-200 x:bg-gray-100 x:dark:bg-neutral-900 x:flex x:items-center x:h-12 x:gap-2 x:rounded-t-md x:border x:border-gray-300 x:dark:border-neutral-700 x:contrast-more:border-gray-900 x:contrast-more:dark:border-gray-50 x:border-b-0","children":[["$","svg",null,{"viewBox":"0 0 28 24","fill":"none","stroke":"currentColor","height":"1em","className":"x:max-w-6 x:shrink-0","children":["$","path",null,{"d":"M7.3 7.8L12.55 12L7.3 16.2M14.65 16.2H19.9M2.11562 1.5H25.0844C25.7005 1.5 26.2 1.99948 26.2 2.61562V21.3844C26.2 22.0005 25.7005 22.5 25.0844 22.5H2.11562C1.49948 22.5 1 22.0005 1 21.3844V2.61562C1 1.99948 1.49948 1.5 2.11562 1.5Z","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round"}]}],["$","span",null,{"className":"x:truncate","children":"UAC Wifi Password"}],["$","$L35",null,{"className":"x:ms-auto x:text-sm"}]]}],["$","pre",null,{"className":"x:group x:focus-visible:nextra-focus x:overflow-x-auto x:subpixel-antialiased x:text-[.9em] x:bg-white x:dark:bg-black x:py-4 x:ring-1 x:ring-inset x:ring-gray-300 x:dark:ring-neutral-700 x:contrast-more:ring-gray-900 x:contrast-more:dark:ring-gray-50 x:contrast-more:contrast-150 x:rounded-b-md not-prose","tabIndex":"0","children":[["$","div",null,{"className":"x:group-hover:opacity-100 x:group-focus:opacity-100 x:opacity-0 x:transition x:focus-within:opacity-100 x:flex x:gap-1 x:absolute x:right-4 x:top-14","children":[["$","$L36",null,{"children":["$","svg",null,{"viewBox":"0 0 24 24","fill":"currentColor","height":"1em","children":["$","path",null,{"d":"M4 19h6v-2H4v2zM20 5H4v2h16V5zm-3 6H4v2h13.25c1.1 0 2 .9 2 2s-.9 2-2 2H15v-2l-3 3l3 3v-2h2c2.21 0 4-1.79 4-4s-1.79-4-4-4z"}]}]}],false]}],["$","code",null,{"className":"nextra-code","dir":"ltr","children":["$","span",null,{"children":["$","span",null,{"style":{"--shiki-light":"#6F42C1","--shiki-dark":"#B392F0"},"children":"1faith!!"}]}]}]]}]]}]
+18:["$","h3",null,{"id":"curriculum","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-8 x:text-2xl","children":["Curriculum",["$","$Ld",null,{"id":"curriculum"}]]}]
+19:["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":["$","a",null,{"href":"https://projects.raspberrypi.org/en/projects/hello-world/editor","target":"_blank","rel":"noreferrer","className":"x:focus-visible:nextra-focus x:text-primary-600 x:underline x:hover:no-underline x:decoration-from-font x:[text-underline-position:from-font]","children":["Introduction to Python: Variables, functions, and loops",[" ",["$","svg",null,{"fill":"none","stroke":"currentColor","strokeLinecap":"round","strokeLinejoin":"round","strokeWidth":1.7,"viewBox":"0 0 24 24","height":"1em","className":"x:inline x:align-baseline x:shrink-0","children":[["$","path",null,{"d":"M7 17L17 7"}],["$","path",null,{"d":"M7 7h10v10"}]]}]]]}]}]
+1a:["$","$L37",null,{"cols":1,"children":[["$","$L38",null,{"icon":["$","svg",null,{"ref":"$undefined","xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-graduation-cap x:h-5 x:w-5","aria-hidden":"true","children":[["$","path","j76jl0",{"d":"M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"}],["$","path","1lu8f3",{"d":"M22 10v6"}],["$","path","1r8lef",{"d":"M6 12.5V16a6 3 0 0 0 12 0v-3.5"}],"$undefined"]}],"title":"Week 1: Hello World & Basics","subtitle":"Learn print statements, variables, data types, and comments.","href":"/week-1"}],["$","$L38",null,{"icon":["$","svg",null,{"ref":"$undefined","xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-graduation-cap x:h-5 x:w-5","aria-hidden":"true","children":[["$","path","j76jl0",{"d":"M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"}],["$","path","1lu8f3",{"d":"M22 10v6"}],["$","path","1r8lef",{"d":"M6 12.5V16a6 3 0 0 0 12 0v-3.5"}],"$undefined"]}],"title":"Week 2: Modules, Functions & Input","subtitle":"Learn how to use reusable code and get input.","href":"/week-2"}],["$","$L38",null,{"icon":["$","svg",null,{"ref":"$undefined","xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-graduation-cap x:h-5 x:w-5","aria-hidden":"true","children":[["$","path","j76jl0",{"d":"M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"}],["$","path","1lu8f3",{"d":"M22 10v6"}],["$","path","1r8lef",{"d":"M6 12.5V16a6 3 0 0 0 12 0v-3.5"}],"$undefined"]}],"title":"Week 3: Conditionals","subtitle":"Learn how to make decisions in code.","href":"/week-3"}],["$","$L38",null,{"icon":["$","svg",null,{"ref":"$undefined","xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-graduation-cap x:h-5 x:w-5","aria-hidden":"true","children":[["$","path","j76jl0",{"d":"M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"}],["$","path","1lu8f3",{"d":"M22 10v6"}],["$","path","1r8lef",{"d":"M6 12.5V16a6 3 0 0 0 12 0v-3.5"}],"$undefined"]}],"title":"Week 4: Lists","subtitle":"Learn how to use a structured collection of items.","href":"/week-4"}],["$","$L38",null,{"icon":["$","svg",null,{"ref":"$undefined","xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-graduation-cap x:h-5 x:w-5","aria-hidden":"true","children":[["$","path","j76jl0",{"d":"M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"}],["$","path","1lu8f3",{"d":"M22 10v6"}],["$","path","1r8lef",{"d":"M6 12.5V16a6 3 0 0 0 12 0v-3.5"}],"$undefined"]}],"title":"Week 5: Challenges","subtitle":"Test what you know by solving these challenges.","href":"/week-5"}]]}]
+1b:["$","hr",null,{"className":"x:my-[2em] nextra-border"}]
+1c:["$","h3",null,{"id":"raspberry-pi-setup","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-8 x:text-2xl","children":["Raspberry Pi Setup",["$","$Ld",null,{"id":"raspberry-pi-setup"}]]}]
+1d:["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":["At Coding Club, you’ll learn to code using a variety of free, beginner-friendly tools. One of these is the ",["$","strong",null,{"children":"Raspberry Pi Foundation’s Code Editor"}],", where you can program in ",["$","strong",null,{"children":"Python"}],", ",["$","strong",null,{"children":"HTML"}],", and ",["$","strong",null,{"children":"CSS"}]," while completing exciting projects from the Raspberry Pi Projects site."]}]
+1e:["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":["To save your projects, you’ll need a ",["$","strong",null,{"children":"Raspberry Pi Foundation account"}],"."]}]
+1f:["$","ul",null,{"className":"x:[:is(ol,ul)_&]:my-[.75em] x:not-first:mt-[1.25em] x:list-disc x:ms-[1.5em]","children":["\n",["$","li",null,{"className":"x:my-[.5em]","children":["If you’re ",["$","strong",null,{"children":"13 or older"}],", you can create your own account."]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":["If you’re ",["$","strong",null,{"children":"under 13"}],", ask a parent or guardian to set one up with you."]}],"\n"]}]
+20:["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":["$","$Lc",null,{"alt":"Raspberry Pi Organization","placeholder":"blur","src":{"src":"/coding-club/_next/static/media/raspberry-pi.f8687e51.png","width":2940,"height":1664,"blurWidth":8,"blurHeight":5,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAYAAAB4ka1VAAAAfElEQVR42lWOuw5FQBiEPc0JL3J4Pc2qKWlUKEVBgkTcCx1xWfEOY3ddEsUkX2Ym/z8SkTUQWUWsm+ijFF2YCOYezyRD0WAwqJwA+3FgXWbUjg/hK0+BqbQ9bJSCMnH+Fu4LbTei7SfBb4H8/uJfYblo8gFNNqAw3WsDy05+EGt8qrrxwwAAAABJRU5ErkJggg=="}}]}]
+21:["$","h3",null,{"id":"how-to-create-your-account","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-8 x:text-2xl","children":["How to Create Your Account",["$","$Ld",null,{"id":"how-to-create-your-account"}]]}]
+22:["$","ol",null,{"className":"x:[:is(ol,ul)_&]:my-[.75em] x:not-first:mt-[1.25em] x:list-decimal x:ms-6","children":["\n",["$","li",null,{"className":"x:my-[.5em]","children":["Go to ",["$","a",null,{"href":"https://projects.raspberrypi.org","target":"_blank","rel":"noreferrer","className":"x:focus-visible:nextra-focus x:text-primary-600 x:underline x:hover:no-underline x:decoration-from-font x:[text-underline-position:from-font]","children":["projects.raspberrypi.org",[" ",["$","svg",null,{"fill":"none","stroke":"currentColor","strokeLinecap":"round","strokeLinejoin":"round","strokeWidth":1.7,"viewBox":"0 0 24 24","height":"1em","className":"x:inline x:align-baseline x:shrink-0","children":[["$","path",null,{"d":"M7 17L17 7"}],["$","path",null,{"d":"M7 7h10v10"}]]}]]]}],"."]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":["Click ",["$","strong",null,{"children":"Log in"}]," in the top right corner."]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":["On the login screen, click ",["$","strong",null,{"children":"Create one"}]," (bottom of the box)."]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":["Select ",["$","strong",null,{"children":"Under 13"}],", if applicable."]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":["Enter your ",["$","strong",null,{"children":"parent’s email"}]," and create a ",["$","strong",null,{"children":"username"}]," for your child (avoid using their real name)."]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":["Complete the remaining fields and note the ",["$","strong",null,{"children":"username"}]," and ",["$","strong",null,{"children":"password"}],"."]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":"Verify the account"}]," using the email sent to the address provided."]}],"\n"]}]
+23:["$","h2",null,{"id":"code-of-conduct","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-10 x:border-b x:pb-1 x:text-3xl nextra-border","children":["Code of Conduct",["$","$Ld",null,{"id":"code-of-conduct"}]]}]
+24:["$","div",null,{"className":"nextra-steps x:ms-4 x:mb-12 x:border-s x:border-gray-200 x:ps-6 x:dark:border-neutral-800","style":{"--counter-id":"_S_1_"},"children":[["$","h3",null,{"id":"be-kind-and-respectful","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-8 x:text-2xl","children":["Be kind and respectful",["$","$Ld",null,{"id":"be-kind-and-respectful"}]]}],["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":"Treat everyone with kindness in your words, actions, and body language. Listen when others are speaking, avoid interrupting, and help create a welcoming environment for everyone."}],["$","h3",null,{"id":"use-devices-only-for-club-activities","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-8 x:text-2xl","children":["Use devices only for club activities",["$","$Ld",null,{"id":"use-devices-only-for-club-activities"}]]}],["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":"Keep phones, tablets, and other devices put away unless they’re needed for a club project. This helps everyone stay focused and shows respect for the leaders and your peers."}],["$","h3",null,{"id":"stay-on-approved-websites","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-8 x:text-2xl","children":["Stay on approved websites",["$","$Ld",null,{"id":"stay-on-approved-websites"}]]}],["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":"Only use websites related to Coding Club activities or instructions. Staying on approved sites keeps everyone safe and focused on creativity and learning together."}]]}]
+25:["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":"By following these guidelines, we can make Coding Club a fun, respectful, and creative space for everyone."}]
+26:["$","h2",null,{"id":"helpful-tips","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-10 x:border-b x:pb-1 x:text-3xl nextra-border","children":["Helpful Tips",["$","$Ld",null,{"id":"helpful-tips"}]]}]
+27:["$","ul",null,{"className":"x:[:is(ol,ul)_&]:my-[.75em] x:not-first:mt-[1.25em] x:list-disc x:ms-[1.5em]","children":["\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":"Bring your laptop fully charged"}]," so you’re ready to code right away."]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":"Arrive"}]," a few minutes ",["$","strong",null,{"children":"before 5:00 PM"}]," so we can start on time."]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":"Review concepts from the previous week"}]," before class to stay confident and keep up."]}],"\n",["$","li",null,{"className":"x:my-[.5em]","children":[["$","strong",null,{"children":"Ask questions"}],", that’s how we learn best!"]}],"\n"]}]
+28:["$","h2",null,{"id":"questions","className":"x:tracking-tight x:text-slate-900 x:dark:text-slate-100 x:font-semibold x:target:animate-[fade-in_1.5s] x:mt-10 x:border-b x:pb-1 x:text-3xl nextra-border","children":["Questions?",["$","$Ld",null,{"id":"questions"}]]}]
+29:["$","p",null,{"className":"x:not-first:mt-[1.25em] x:leading-7","children":["For more details, visit the ",["$","a",null,{"href":"https://uac.churchcenter.com/calendar/event/204535151","target":"_blank","rel":"noreferrer","className":"x:focus-visible:nextra-focus x:text-primary-600 x:underline x:hover:no-underline x:decoration-from-font x:[text-underline-position:from-font]","children":["UAC Home > Coding Club",[" ",["$","svg",null,{"fill":"none","stroke":"currentColor","strokeLinecap":"round","strokeLinejoin":"round","strokeWidth":1.7,"viewBox":"0 0 24 24","height":"1em","className":"x:inline x:align-baseline x:shrink-0","children":[["$","path",null,{"d":"M7 17L17 7"}],["$","path",null,{"d":"M7 7h10v10"}]]}]]]}]," page.",["$","br",null,{}],"\n","Questions? Contact ",["$","strong",null,{"children":"Justin Hsu"}]," at ",["$","$L39",null,{"href":"mailto:justinh@uachome.org","prefetch":"$undefined","className":"x:focus-visible:nextra-focus x:text-primary-600 x:underline x:hover:no-underline x:decoration-from-font x:[text-underline-position:from-font]","children":"justinh@uachome.org"}]," or call ",["$","$L39",null,{"href":"tel:9054771554","prefetch":"$undefined","className":"x:focus-visible:nextra-focus x:text-primary-600 x:underline x:hover:no-underline x:decoration-from-font x:[text-underline-position:from-font]","children":"905‑477‑1554"}],"."]}]
+2a:["$","div",null,{"className":"x:mt-4"}]
+2b:["$","$L33",null,{"cols":3,"children":["$","$L34",null,{"name":"Justin Hsu","role":"Organizer, Pastor of Youth & Young Adult Discipleship","avatar":"./assets/justin.webp"}]}]
+3a:I[68386,["/coding-club/_next/static/chunks/ff1a16fafef87110.js","/coding-club/_next/static/chunks/133a980807f66185.js","/coding-club/_next/static/chunks/a0526a7d7cf62de7.js","/coding-club/_next/static/chunks/de3addb05091b513.js"],"ThemeConfigProvider"]
+3b:I[6344,["/coding-club/_next/static/chunks/ff1a16fafef87110.js","/coding-club/_next/static/chunks/133a980807f66185.js","/coding-club/_next/static/chunks/a0526a7d7cf62de7.js","/coding-club/_next/static/chunks/de3addb05091b513.js"],"LastUpdated"]
+3c:I[98091,["/coding-club/_next/static/chunks/ff1a16fafef87110.js","/coding-club/_next/static/chunks/133a980807f66185.js","/coding-club/_next/static/chunks/a0526a7d7cf62de7.js","/coding-club/_next/static/chunks/de3addb05091b513.js"],"Search"]
+3d:I[63178,["/coding-club/_next/static/chunks/ff1a16fafef87110.js","/coding-club/_next/static/chunks/133a980807f66185.js","/coding-club/_next/static/chunks/a0526a7d7cf62de7.js","/coding-club/_next/static/chunks/de3addb05091b513.js"],"ThemeProvider"]
+3e:I[91675,["/coding-club/_next/static/chunks/ff1a16fafef87110.js","/coding-club/_next/static/chunks/133a980807f66185.js","/coding-club/_next/static/chunks/a0526a7d7cf62de7.js","/coding-club/_next/static/chunks/de3addb05091b513.js"],"SkipNavLink"]
+3f:I[37985,["/coding-club/_next/static/chunks/ff1a16fafef87110.js","/coding-club/_next/static/chunks/133a980807f66185.js","/coding-club/_next/static/chunks/a0526a7d7cf62de7.js","/coding-club/_next/static/chunks/de3addb05091b513.js"],"ConfigProvider"]
+40:I[43634,["/coding-club/_next/static/chunks/ff1a16fafef87110.js","/coding-club/_next/static/chunks/133a980807f66185.js","/coding-club/_next/static/chunks/a0526a7d7cf62de7.js","/coding-club/_next/static/chunks/de3addb05091b513.js"],"ClientNavbar"]
+41:I[769,["/coding-club/_next/static/chunks/ff1a16fafef87110.js","/coding-club/_next/static/chunks/133a980807f66185.js","/coding-club/_next/static/chunks/a0526a7d7cf62de7.js","/coding-club/_next/static/chunks/de3addb05091b513.js"],"MobileNav"]
+42:I[39756,["/coding-club/_next/static/chunks/ff1a16fafef87110.js","/coding-club/_next/static/chunks/d2be314c3ece3fbe.js"],"default"]
+43:I[37457,["/coding-club/_next/static/chunks/ff1a16fafef87110.js","/coding-club/_next/static/chunks/d2be314c3ece3fbe.js"],"default"]
+2:["$","html",null,{"lang":"en","dir":"ltr","suppressHydrationWarning":true,"children":[["$","head",null,{"children":["$undefined",["$","style",null,{"children":":root {\n  --nextra-primary-hue: 212deg;\n  --nextra-primary-saturation: 100%;\n  --nextra-primary-lightness: 45%;\n  --nextra-bg: 250,250,250;\n  --nextra-content-width: 90rem;\n}\n.dark {\n  --nextra-primary-hue: 204deg;\n  --nextra-primary-saturation: 100%;\n  --nextra-primary-lightness: 55%;\n  --nextra-bg: 17,17,17;\n}\n::selection {\n  background: hsla(var(--nextra-primary-hue),var(--nextra-primary-saturation),var(--nextra-primary-lightness),.3);\n}\nhtml {\n  background: rgb(var(--nextra-bg));\n}"}],["$","meta",null,{"name":"theme-color","media":"(prefers-color-scheme: light)","content":"rgb(250,250,250)"}],["$","meta",null,{"name":"theme-color","media":"(prefers-color-scheme: dark)","content":"rgb(17,17,17)"}],"$undefined"]}],["$","body",null,{"children":["$","$L3a",null,{"value":{"copyPageButton":true,"darkMode":true,"docsRepositoryBase":"https://kylealvares.github.io/coding-club/docs","editLink":false,"feedback":{"content":null,"labels":"feedback"},"i18n":[],"lastUpdated":["$","$L3b",null,{}],"navigation":{"next":true,"prev":true},"search":["$","$L3c",null,{}],"sidebar":{"defaultMenuCollapseLevel":2,"defaultOpen":true,"toggleButton":true},"themeSwitch":{"dark":"Dark","light":"Light","system":"System"},"toc":{"backToTop":"Scroll to top","float":true,"title":"On This Page"}},"children":["$","$L3d",null,{"attribute":"class","defaultTheme":"system","disableTransitionOnChange":true,"storageKey":"theme","children":[["$","$L3e",null,{}],"$undefined",["$","$L3f",null,{"pageMap":[{"data":{"week-1":{"title":"Week 1"},"week-2":{"title":"Week 2"},"week-3":{"title":"Week 3"},"week-4":{"title":"Week 4"},"week-5":{"title":"Week 5"},"showcase":{"title":"Showcase"}}},{"name":"index","route":"/","frontMatter":"$0:f:0:1:1:children:0:props:children:0:props:children:props:children:1:props:metadata","title":"Welcome to Coding Club"},{"name":"week-1","route":"/week-1","frontMatter":{"title":"Week One","filePath":"app/week-1/page.mdx","timestamp":1789861204000},"title":"Week 1"},{"name":"week-2","route":"/week-2","frontMatter":{"title":"Week Two","filePath":"app/week-2/page.mdx","timestamp":1789861204000},"title":"Week 2"},{"name":"week-3","route":"/week-3","frontMatter":{"title":"Week Three","filePath":"app/week-3/page.mdx","timestamp":1789861204000},"title":"Week 3"},{"name":"week-4","route":"/week-4","frontMatter":{"title":"Week Four","filePath":"app/week-4/page.mdx","timestamp":1789861204000},"title":"Week 4"},{"name":"week-5","route":"/week-5","frontMatter":{"title":"Week Five","filePath":"app/week-5/page.mdx","timestamp":1789861204000},"title":"Week 5"},{"name":"showcase","route":"/showcase","frontMatter":{"title":"Showcase","filePath":"app/showcase/page.mdx","timestamp":1789861204000},"title":"Showcase"}],"navbar":["$","header",null,{"className":"nextra-navbar x:sticky x:top-0 x:z-30 x:w-full x:bg-transparent x:print:hidden x:max-md:[.nextra-banner:not([class$=hidden])~&]:top-(--nextra-banner-height)","children":[["$","div",null,{"className":"nextra-navbar-blur x:absolute x:-z-1 x:size-full nextra-border x:border-b x:backdrop-blur-md x:bg-nextra-bg/70"}],["$","nav",null,{"style":{"height":"var(--nextra-navbar-height)"},"className":"x:mx-auto x:flex x:max-w-(--nextra-content-width) x:items-center x:gap-4 x:pl-[max(env(safe-area-inset-left),1.5rem)] x:pr-[max(env(safe-area-inset-right),1.5rem)] x:justify-end","children":[["$","$L39",null,{"href":"/","className":"x:flex x:items-center x:me-auto x:transition-opacity x:focus-visible:nextra-focus x:hover:opacity-75","aria-label":"Home page","children":["$","b",null,{"children":"Coding Club"}]}],["$","$L40",null,{"className":"","children":["$undefined","$undefined","$undefined"]}]]}]]}],"footer":"$undefined","children":[["$","$L41",null,{}],["$","$L42",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L43",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],"$L44","$L45"]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]]}]]}]}]}]]}]
+44:["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}]
+45:["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]
+30:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+2e:null
+32:[["$","title","0",{"children":"Welcome to Coding Club"}]]
