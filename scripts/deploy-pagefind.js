@@ -24,7 +24,7 @@ try {
   fs.writeFileSync("out/.nojekyll", "");
 
   // Step 6: Publish to gh-pages
-  execSync("npx gh-pages -d out", { stdio: "inherit" });
+  execSync("npx gh-pages -d out --dotfiles", { stdio: "inherit" });
 
   console.log("\n✅ Deployment complete!");
 } catch (err) {
