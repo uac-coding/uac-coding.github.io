@@ -1,519 +1,219 @@
-import {
-    Binary,
-    Box,
-    Brackets,
-    CircleQuestionMark,
-    Code,
-    Form,
-    MessageCircleCode,
-    PackageOpen,
-    Printer,
-    Sigma,
-    SquareFunction,
-    TextCursorInput
-} from "lucide-react"
+import { Code, Form, Presentation, List } from 'lucide-react'
 
 # Week Five
 
-This week, you'll practice everything you've learned so far by solving 
-coding challenges that start easy and gradually get more complex.
+This week we learn how to **store multiple values** using **lists** and how to
+**access, modify, and check items** inside them.
 
-Before you get started, please fill out this survey.
+By the end of this lesson, your programs will be able to **remember more than one thing at a time**.
 
-<Tiles cols={1}>
-  <Tile
-    icon={<Form className="x:h-5 x:w-5" />}
-    title="Google Forms"
-    subtitle="Please take a moment to provide some Coding Club feedback."
-    href="https://forms.gle/HNqiyaZYqAU8x9Yr8"
-    newWindow
-  />
-</Tiles>
+## Presentation
 
-Each challenge will use only the Python concepts introduced so far:
+<GoogleSlides url="https://docs.google.com/presentation/d/e/2PACX-1vSe8K71uFs_i_3AOGCzI8tyxln1h8W_GQCKOCqQra28Ekcb97_CZWM6ho0bSUlS-DlekX4OvK7qxx9I/pubembed?start=false&loop=false&delayms=0" />
 
-<Cards>
-    <Card
-        icon={<MessageCircleCode />} 
-        href="/week-1#comments" 
-        title="Comments" 
-    />
-    <Card
-        icon={<Box />} 
-        href="/week-1#variables" 
-        title="Variables" 
-    />
-    <Card 
-        icon={<Printer />}
-        href="/week-1#print-statements" 
-        title="Print statements" 
-    />
-    <Card
-        icon={<Sigma />} 
-        href="/week-2#simple-math" 
-        title="Math" 
-    />
-    <Card 
-        icon={<PackageOpen />} 
-        href="/week-2#modules" 
-        title="Modules" 
-    />
-    <Card
-        icon={<SquareFunction />} 
-        href="/week-2#functions-1" 
-        title="Functions" 
-    />
-    <Card 
-        icon={<TextCursorInput />}
-        href="/week-2#input" 
-        title="Input" 
-    />
-    <Card 
-        icon={<CircleQuestionMark />}
-        href="/week-3#conditionals" 
-        title="Conditionals" 
-    />
-    <Card 
-        icon={<Brackets />}
-        href="/week-4#lists" 
-        title="Lists" 
-    />
-</Cards>
+## Variables vs. Lists
 
+### Single Variables
 
-Solve the challenges in the Python Editor:
+A variable stores **one value**.
 
-<Tiles cols={1}>
-  <Tile
-    icon={<Code className="x:h-5 x:w-5" />}
-    title="Python Editor"
-    subtitle="You can a file for each challenge."
-    href="https://editor.raspberrypi.org/en/projects/blank-python-starter"
-    newWindow
-  />
-</Tiles>
-
-
-## Challenge 1 
-
-### Hello Again 👋
-
-**Goal:**  Practice using `print()` and writing comments.
-
-**What your program should do**
-- Show the word **Hello!**
-- Show a **waving hand emoji** on the next line
-
-**Requirements**
-- Add **one comment** that explains what the program does
-- Use **two** `print()` statements
-
-<Tabs items={['Hint 1', 'Hint 2']}>
-
-<Tab>
-Python shows text on the screen using a function.
-</Tab>
-
-<Tab>
-Comments start with `#`.  
-Each line of output needs its own `print()` statement.
-</Tab>
-
-<Tab>
-```python copy filename="hello_again.py"
-# This program prints a greeting and an emoji
-print("Hello!")
-print("👋")
-```
-</Tab>
-
-</Tabs>
-
-## Challenge 2 
-
-### About Me 💁
-
-**Goal:**  Practice **variables**, **input**, and **f-strings**.
-
-**Requirements**
-- Get input for **3 variables**:
-  - one for a **name**
-  - one for an **age**
-  - one for a **favorite color**
-- Print the following information:
-  - the name
-  - the favorite color
-  - the age **next year**
-
-**Example output**
-```txt
-My name is Jesse, my favourite color is green and I will be 13 next year.
+```python copy
+name = "Alex"
 ```
 
-<Tabs items={['Hint 1', 'Hint 2']}>
+If we want to store more than one name, this doesn't work very well.
 
-<Tab>
-Ask the user for each piece of information using `input()` and store each answer in its own variable.
-</Tab>
+### Lists
 
-<Tab>
-`input()` always gives you text.  
-If you want to do math with the age, you must convert it to a number using `int()`.
-</Tab>
+A **list** stores **many values** in one variable.
 
-<Tab>
-```python copy filename="about_me.py"
-name = input("Enter your name: ")
-age = int(input("Enter your age: "))
-color = input("Enter your favourite color: ")
-
-print(
-    f"My name is {name}, my favourite color is {color}, and I will be {age + 1} next year."
-)
-```
-</Tab>
-
-</Tabs>
-
-
-## Challenge 3  
-
-### Math Fun 🧮
-
-**Goal:**  Practice **variables**, **input**, **math operations**, and **f-strings**.
-
-**Requirements**
-- Ask the user for **two numbers**
-- Calculate and print:
-  - the **sum**
-  - the **difference**
-  - the **product**
-  - the **quotient** (use `/` for division)
-- Print **all results in full sentences** using f-strings
-
-**Example output**
-```txt
-You entered 8 and 3.
-Sum: 11
-Difference: 5
-Product: 24
-Quotient: 2.6666666666666665
+```python copy
+names = ["Alex", "Jordan", "Sam"]
 ```
 
-<Tabs items={['Hint 1', 'Hint 2']}>
+## Creating Lists
 
-<Tab>
-Use `input()` to get the two numbers from the user, and store them in separate variables.
-</Tab>
+Lists use **square brackets** `[]`.
 
-<Tab>
-Remember to convert the inputs to `int` so you can do math.  
-Then create new variables for sum, difference, product, and quotient.
-</Tab>
-
-<Tab>
-```python copy filename="math_fun.py"
-num1 = int(input("Enter the first number: "))
-num2 = int(input("Enter the second number: "))
-
-sum_result = num1 + num2
-diff_result = num1 - num2
-prod_result = num1 * num2
-quot_result = num1 / num2
-
-print(f"You entered {num1} and {num2}.")
-print(f"Sum: {sum_result}")
-print(f"Difference: {diff_result}")
-print(f"Product: {prod_result}")
-print(f"Quotient: {quot_result}")
-```
-</Tab>
-
-</Tabs>
-
-
-## Challenge 4 
-
-### Random Choice 🎲
-
-**Goal:**  
-Practice **lists**, **input**, **conditionals**, and **random.randint()**.
-
-**Requirements**
-- Create a list of **3 or more items** (for example, snacks, colors, or animals)  
-- Ask the user to pick a **number** from `1` to the length of your list  
-- Use `random.randint()` to generate a random number between `0` and the last index of the list  
-- Print **both the user's choice** and **the randomly chosen item** from the list  
-- Use **if / elif / else** to handle invalid input
-
-**Example output**
-```txt
-Your list: ["apple", "banana", "cherry"]
-Enter a number between 1 and 3: 2
-You chose: banana
-The computer randomly picked: cherry
+```python copy
+colors = ["red", "blue", "green"]
 ```
 
-<Tabs items={['Hint 1', 'Hint 2']}>
+An empty list:
 
-<Tab>
-Remember that **list indexes start at 0**, so you may need to subtract 1 from the user's number to get the correct item.
-</Tab>
-
-<Tab>
-Use `random.randint(0, len(list)-1)` to pick a random index.  
-Check if the user's input is valid with `if / elif / else`.
-</Tab>
-
-<Tab>
-```python copy filename="random_choice.py"
-import random
-
-# Create a list of items
-items = ["apple", "banana", "cherry"]
-
-# Ask the user for a choice
-user_input = int(input(f"Enter a number between 1 and {len(items)}: "))
-
-# Check if input is valid
-if 1 <= user_input <= len(items):
-    print(f"You chose: {items[user_input - 1]}")
-else:
-    print("Invalid choice!")
-
-# Randomly select an item
-random_index = random.randint(0, len(items) - 1)
-print(f"The computer randomly picked: {items[random_index]}")
-```
-</Tab>
-
-</Tabs>
-
-## Challenge 5
-
-### Raffle Game 🎟️
-
-**Goal:**  Practice **variables, input, f-strings, lists, random numbers, conditionals, and functions**.
-
-**Requirements**
-- Create an **empty list** called `participants`  
-- Write a **function** called `enter_raffle()` that:
-  - Asks the user for their **name**  
-  - Adds the name to the `participants` list  
-- Write another **function** called `draw_winner()` that:
-  - Picks a **random winner** from the `participants` list using `random.randint()`  
-  - Prints a message announcing the winner using an **f-string**  
-- Call `enter_raffle()` **three times** to simulate three participants  
-- Call `draw_winner()` **once** at the end to announce the winner  
-
-**Example output**
-```txt
-Enter your name: Alice
-Enter your name: Bob
-Enter your name: Charlie
-
-The winner is: Bob! 🎉
+```python copy
+items = []
 ```
 
-<Tabs items={['Hint 1', 'Hint 2']}>
-
-<Tab>
-Use a **list** to store the names. Each time someone enters, append their name to the list.
-</Tab>
-
-<Tab>
-Use `random.randint(0, len(participants)-1)` to select a random index for the winner.
-</Tab>
-
-<Tab>
-```python copy filename="raffle_game.py"
-import random
-
-# List to store participants
-participants = []
-
-# Function to enter the raffle
-def enter_raffle():
-    name = input("Enter your name: ")
-    participants.append(name)
-
-# Function to draw the winner
-def draw_winner():
-    winner_index = random.randint(0, len(participants) - 1)
-    winner = participants[winner_index]
-    print(f"\nThe winner is: {winner}! 🎉")
-
-# Enter three participants
-enter_raffle()
-enter_raffle()
-enter_raffle()
-
-# Draw the winner
-draw_winner()
-```
-</Tab>
-
-</Tabs>
-
-## Challenge 6
-
-### Number Checker 🔢
-
-**Goal:**  Practice **functions**, **input**, **lists**, **conditionals**, and **f-strings**.
-
-<Callout type="important">
-The **modulo operator `%`** tells you the **remainder** after dividing one number by another.  
-
-- **Example 1:** `7 % 2`  
-  - 7 divided by 2 equals 3 with a remainder of **1**  
-  - So `7 % 2` is **1**
-
-- **Example 2:** `8 % 2`  
-  - 8 divided by 2 equals 4 with no remainder  
-  - So `8 % 2` is **0**
-
-**Tip:** The left side is the number you want to divide, the right side is the number you divide by.  
-We use this to check if a number is **even** (`num % 2 == 0`) or **odd** (`num % 2 != 0`).
+<Callout type="info">
+Lists keep items in order. The order matters.
 </Callout>
 
-**Requirements**
-- Write a **function** called `check_number()` that:
-  - Asks the user to enter a number
-  - Converts it to an integer
-  - Checks if it is **even** or **odd**
-  - Prints a message indicating whether the number is even or odd
-- Run the function **three times**, storing all numbers in a **list**
-- After all three runs, print the list of numbers entered
+## Indexing Lists
 
-**Example output**
-```txt
-Enter a number: 4
-4 is even!
-Enter a number: 7
-7 is odd!
-Enter a number: 10
-10 is even!
-All numbers entered: [4, 7, 10]
+Each item in a list has a **position number** called an **index**.
+
+<Callout type="important">
+Indexes start at **0**.
+</Callout>
+
+```python copy
+colors = ["red", "blue", "green"]
+
+print(colors[0])  # red
+print(colors[1])  # blue
+print(colors[2])  # green
 ```
 
-<Tabs items={['Hint 1', 'Hint 2']}>
+### Changing Items
 
-<Tab>
-Define a function using `def check_number():` and put all code inside it with proper **indentation**.  
-You can append each number to a list after converting it to an integer.
-</Tab>
-
-<Tab>
-Use `num % 2 == 0` to check if a number is even, and `else` for odd.  
-Call the function **three times** in a row to let the user enter three numbers.
-</Tab>
-
-<Tab>
-```python copy filename="number_checker.py"
-# List to store numbers
-numbers = []
-
-def check_number():
-    num = int(input("Enter a number: "))
-    numbers.append(num)
-    
-    if num % 2 == 0:
-        print(f"{num} is even!")
-    else:
-        print(f"{num} is odd!")
-
-# Run the function three times
-check_number()
-check_number()
-check_number()
-
-# Show all numbers entered
-print(f"All numbers entered: {numbers}")
-```
-</Tab>
-
-</Tabs>
-
-
-## Challenge 7
-
-### Quiz 📝
-
-**Goal:**  Practice **variables, input, conditionals, lists, and f-strings**.
-
-**Requirements**
-- Store the **questions** in a list
-- Store the **correct answers** in a separate list
-- Ask the user each question using `input()`
-- Compare the answer using `if / else`  
-- Print `"Correct!"` or `"Incorrect!"` for each answer
-- Keep track of **how many answers are correct**
-- Print the total correct answers at the end
-
-**Example output**
-```txt
-Question 1: What is 5 + 3? 8
-Correct!
-Question 2: What is the capital of France? Paris
-Correct!
-Question 3: What color do you get when you mix red and white? Pink
-Correct!
-You got 3 out of 3 correct!
+```python copy
+colors[1] = "yellow"
+print(colors)
 ```
 
-<Tabs items={['Hint 1', 'Hint 2']}>
-
-<Tab>
-Store all questions in a **list**, e.g.,  
-`questions = ["What is 5 + 3?", "Capital of France?", "Red + White?"]`  
-Do the same for answers in a separate list.
-</Tab>
-
-<Tab>
-Access each question and answer by **index** (0, 1, 2).  
-Compare using `if user_answer == answers[index]:`.
-</Tab>
-
-<Tab>
-```python copy filename="quiz.py"
-# Lists of questions and answers
-questions = [
-    "What is 5 + 3? ",
-    "What is the capital of France? ",
-    "What color do you get when you mix red and white? "
-]
-
-answers = ["8", "Paris", "Pink"]
-
-# Keep track of score
-score = 0
-
-# Question 1
-user_answer = input(questions[0])
-if user_answer == answers[0]:
-    print("Correct!")
-    score += 1
-else:
-    print("Incorrect!")
-
-# Question 2
-user_answer = input(questions[1])
-if user_answer == answers[1]:
-    print("Correct!")
-    score += 1
-else:
-    print("Incorrect!")
-
-# Question 3
-user_answer = input(questions[2])
-if user_answer == answers[2]:
-    print("Correct!")
-    score += 1
-else:
-    print("Incorrect!")
-
-print(f"You got {score} out of {len(questions)} correct!")
+Result:
 ```
-</Tab>
+['red', 'yellow', 'green']
+```
 
-</Tabs>
+<Callout type="warning">
+Using an index that doesn't exist will cause an error.
+</Callout>
+
+## List Length
+
+Use `len()` to find how many items are in a list.
+
+```python copy
+numbers = [3, 7, 2]
+print(len(numbers))
+```
+
+## Adding Items to a List
+
+You can add new colors to a list using `append()`.
+
+### `append()`
+
+`append()` adds an item to the **end** of a list.
+
+```python copy
+colors = ["red", "blue"]
+colors.append("green")
+print(colors)
+# ['red', 'blue', 'green']
+```
+
+After running this code:
+- `"green"` is added to the end of the list
+- The list now has **three colors**
+
+### Using Input to Add a Color
+
+You can also add a color using user input.
+
+```python copy
+colors = ["red", "blue"]
+
+new_color = input("Enter a color to add: ")
+colors.append(new_color)
+
+print(colors)
+```
+
+<Callout type="info">
+`append()` always adds the item to the end of the list.
+</Callout>
+
+## Comparing a List Item to a Value
+
+You can compare a **specific item in a list** to a value using its **index**.
+
+This lets your program make decisions based on **what is stored in the list**.
+
+### Example: Checking a List Item
+
+```python copy
+colors = ["red", "blue", "green"]
+
+if colors[0] == "red":
+    print("The first color is red!")
+```
+
+In this example:
+- `colors[0]` means **the first item**
+- The program compares it to `"red"`
+- If they match, the message prints
+
+### Using Input with List Indexes
+
+You can compare user input to an item in a list.
+
+```python copy
+answers = ["A", "B"]
+
+choice = input("Choose A or B: ")
+
+if choice == answers[0]:
+    print("You chose A!")
+elif choice == answers[1]:
+    print("You chose B!")
+```
+
+### Comparing Numbers in a List
+
+Lists can also store numbers.
+
+```python copy
+scores = [85, 92]
+
+if scores[1] >= 90:
+    print("High score!")
+```
+
+Here:
+- `scores[1]` is `92`
+- The condition checks if it is **greater than or equal to 90**
+
+<Callout type="info">
+Always make sure the index exists before comparing it.
+</Callout>
+
+## Classroom Example
+
+```python copy filename="classroom.py"
+# Make a list of fruits
+fruitlist = ["apple", "banana", "cherry"]
+
+# Print the list out
+print(fruitlist)
+
+# Each item in the list has an "index" - which is it's position in the list
+# In Python the index starts at 0, we acccess the item using square brackets and the position
+
+# Examples:
+# Print the first fruit in the list
+
+# Print the second fruit in the list
+
+# Print the third fruit in the list
+
+# What happens if I try to access an item in position 4?
+
+# How to add something at the end of the list?
+fruitlist.append("orange")
+
+# Print the entire list
+print(fruitlist)
+
+# Now try to acccess the item at position 4
+
+# Print how many fruit are in the list
+print(len(fruitlist))
+
+# To use len() to access last item in the list
+# print(fruitlist[len(fruitlist)-1])
+
+# https://www.w3schools.com/python/python_lists_methods.asp
+```

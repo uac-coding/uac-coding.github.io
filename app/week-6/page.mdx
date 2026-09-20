@@ -1,0 +1,127 @@
+# Week Six
+
+This week we learn about **loops** — a way to repeat code multiple times without writing the same lines over and over.
+
+## Presentation
+
+<GoogleSlides url="https://docs.google.com/presentation/d/e/2PACX-1vRFiyxU1B9zPdRbrdr_tlyYMX5uZIU4xi0btaBH-nph6UfZl0UK0niz-9cyfvf4d9vgubxU3fN_7vNo/pubembed?start=false&loop=false&delayms=0" />
+
+## Why Loops?
+
+Sometimes you want your program to do the same thing many times. Instead of copying and pasting code, you use a **loop**.
+
+```python copy
+# Without a loop — repetitive!
+print("Hello!")
+print("Hello!")
+print("Hello!")
+
+# With a loop — much cleaner!
+for i in range(3):
+    print("Hello!")
+```
+
+## For Loops
+
+A **for loop** repeats code for each item in a sequence.
+
+### Looping Over a List
+
+```python copy
+colors = ["red", "blue", "green"]
+
+for color in colors:
+    print(color)
+```
+
+Output:
+```
+red
+blue
+green
+```
+
+### Using `range()`
+
+`range(n)` creates a sequence of numbers from `0` to `n - 1`.
+
+```python copy
+for i in range(5):
+    print(i)
+```
+
+Output:
+```
+0
+1
+2
+3
+4
+```
+
+### Looping with an Index
+
+You can use `range()` with `len()` to loop through a list by index:
+
+```python copy
+fruits = ["apple", "banana", "cherry"]
+
+for i in range(len(fruits)):
+    print(f"{i}: {fruits[i]}")
+```
+
+Output:
+```
+0: apple
+1: banana
+2: cherry
+```
+
+## While Loops
+
+A **while loop** keeps running **as long as a condition is True**.
+
+```python copy
+count = 0
+
+while count < 3:
+    print(f"Count is {count}")
+    count = count + 1
+```
+
+Output:
+```
+Count is 0
+Count is 1
+Count is 2
+```
+
+<Callout type="warning">
+Make sure the condition eventually becomes `False`, or the loop will run forever!
+</Callout>
+
+## Looping and Lists Together
+
+Loops are especially useful with lists:
+
+```python copy
+scores = [85, 92, 78]
+total = 0
+
+for score in scores:
+    total = total + score
+
+print(f"Total: {total}")
+print(f"Average: {total / len(scores)}")
+```
+
+## Activity
+
+Try writing a loop that prints your name 5 times, then one that prints every item in a list of your favorite foods!
+
+```python copy filename="loops.py"
+foods = ["pizza", "sushi", "tacos"]
+
+for food in foods:
+    print(f"I love {food}!")
+```
