@@ -5,6 +5,11 @@ import 'nextra-theme-docs/style.css'
 import './styles/globals.css' 
 
 export const metadata = {
+  title: 'UAC Coding Club',
+  description: 'Welcome to Coding Club!',
+  icons: {
+    icon: '/uac-logo.png', // or '/icon.png' depending on your file name in the public folder
+  },
   // Define your metadata here
   // For more information on metadata API, see: https://nextjs.org/docs/app/building-your-application/optimizing/metadata
 }
