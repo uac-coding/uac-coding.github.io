@@ -1,4 +1,4 @@
-# UAC Coding (`uac-coding.github.io`)
+# UAC Coding Club
 
 Welcome to the official repository for **uac-coding.github.io**, the site for UAC Coding, built using [Nextra](https://nextra.site/) and [Next.js](https://next.js.org/).
 
