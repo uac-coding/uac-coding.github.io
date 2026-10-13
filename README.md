@@ -42,8 +42,6 @@ node -v  # Should output v18.x.x or higher
 npm -v
 ```
 
----
-
 ### Installation
 
 Clone the repository and install the required project dependencies:
@@ -61,8 +59,6 @@ yarn install
 pnpm install
 ```
 
----
-
 ## 🛠️ Local Development
 
 To run the documentation site locally with live reloading:
@@ -76,8 +72,6 @@ pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) in your browser to view the site.
-
----
 
 ## 🚢 Deployment
 
