@@ -73,6 +73,21 @@ pnpm dev
 
 Open [http://localhost:3000](http://localhost:3000) in your browser to view the site.
 
+### Previewing the Production Build Locally
+
+Because GitHub Pages serves a static export (typically outputted to an `out` folder), you can test the exact production build locally before deploying to ensure everything looks and behaves correctly:
+
+```bash
+# Build the static site
+npm run build
+# or
+yarn build
+# or
+pnpm build
+
+# Serve the static output folder locally
+npx serve out
+
 ## 🚢 Deployment
 
 All site updates and code changes should be made and merged into the **`main`** branch.
