@@ -90,3 +90,100 @@ Python 🐍 can also do math!
 - Change the values in the code and see how the output changes.  
 - Add more `print()` statements with your own emojis or math.  
 - Try creating a simple message using your name and favorite emoji!
+
+## Challenges
+
+Choose your difficulty level and put your Python skills to the test!
+
+<Tabs items={['Beginner', 'Intermediate', 'Advanced']}>
+  <Tab>
+    ### The Digital ID Card
+    Write a Python program that generates a structured digital ID card using exact output formats.
+
+    **Requirements:**
+    1. Include exactly two comment lines at the top containing your name and today's date.
+    2. Use a standard `print()` statement to output the text `Name: [Your Name]`.
+    3. Use an f-string `print()` statement to calculate and output your age next year, assuming your current age is 14 (`14 + 1`).
+
+    **Expected Output:**
+    ```text
+    Name: Alex
+    Age next year: 15
+    ```
+
+    <details>
+    <summary><b>View Solution</b></summary>
+
+    ```python copy
+    # Name: Alex
+    # Date: October 13, 2026
+
+    print("Name: Alex")
+    print(f"Age next year: {14 + 1}")
+    ```
+    </details>
+  </Tab>
+  <Tab>
+    ### The Movie Ticket Receipt
+    Create a script that prints a movie theater receipt and calculates totals using math inside f-strings.
+
+    **Requirements:**
+    1. Include a comment at the top explaining what the script does.
+    2. Use `print()` with an f-string to calculate the cost for 2 movie tickets at $12.50 each.
+    3. Use `print()` with an f-string to calculate the snack cost for 1 popcorn ($6.75) and 2 drinks ($3.50 each).
+    4. Use a final `print()` statement with an f-string to add the ticket cost and snack cost together for the total.
+
+    **Expected Output:**
+    ```text
+    --- MOVIE TICKET RECEIPT ---
+    Tickets Cost: $25.0
+    Snacks Cost: $13.75
+    Total Due: $38.75
+    ```
+
+    <details>
+    <summary><b>View Solution</b></summary>
+
+    ```python copy
+    # Receipt calculator for movie tickets and snacks.
+    # Calculates individual costs and the final total.
+
+    print("--- MOVIE TICKET RECEIPT ---")
+    print(f"Tickets Cost: ${2 * 12.50}")
+    print(f"Snacks Cost: ${6.75 + (2 * 3.50)}")
+    print(f"Total Due: ${25.0 + 13.75}")
+    ```
+    </details>
+  </Tab>
+  <Tab>
+    ### The Geometry Helper
+    Build a script that calculates the area and perimeter of a specific rectangle using precise mathematical formulas.
+
+    **Requirements:**
+    1. Include comments outlining the formulas for Area (`width * length`) and Perimeter (`2 * (width + length)`).
+    2. Print a status line displaying the fixed dimensions: Width = 7.5 meters, Length = 14.2 meters.
+    3. Use an f-string `print()` statement to compute and display the total area.
+    4. Use an f-string `print()` statement to compute and display the total perimeter.
+
+    **Expected Output:**
+    ```text
+    Room Dimensions: Width = 7.5m, Length = 14.2m
+    Calculated Area: 106.5 square meters
+    Calculated Perimeter: 43.4 meters
+    ```
+
+    <details>
+    <summary><b>View Solution</b></summary>
+
+    ```python copy
+    # Geometry calculations for a rectangular room.
+    # Area formula: width * length
+    # Perimeter formula: 2 * (width + length)
+
+    print("Room Dimensions: Width = 7.5m, Length = 14.2m")
+    print(f"Calculated Area: {7.5 * 14.2} square meters")
+    print(f"Calculated Perimeter: {2 * (7.5 + 14.2)} meters")
+    ```
+    </details>
+  </Tab>
+</Tabs>
