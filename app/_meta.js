@@ -14,8 +14,5 @@ export default {
   },
   "week-6": {
     display: "hidden"
-  },
-  "showcase": {
-    display: "hidden"
   }
 }
