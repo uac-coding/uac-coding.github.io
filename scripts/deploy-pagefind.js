@@ -1,36 +1,40 @@
-import fs from "fs";
-import { execSync } from "child_process";
+const fs = require("fs");
+const path = require("path");
+const { execSync } = require("child_process");
+const ghpages = require("gh-pages");
 
-const GITIGNORE = ".gitignore";
-const IGNORE_LINE = "_pagefind/";
+const PAGEFIND_JS = "out/_pagefind/pagefind.js";
 
-// Step 1: Read the original .gitignore
-const original = fs.readFileSync(GITIGNORE, "utf8");
+execSync("npm run postbuild", { stdio: "inherit" });
 
-// Step 2: Remove only the line that ignores _pagefind
-const modified = original
-  .split("\n")
-  .filter(line => line.trim() !== IGNORE_LINE)
-  .join("\n");
-
-// Step 3: Write the modified .gitignore
-fs.writeFileSync(GITIGNORE, modified);
-
-try {
-  // Step 4: Run Pagefind to generate the index
-  execSync("npm run postbuild", { stdio: "inherit" });
-
-  // Step 5: Disable Jekyll so GitHub Pages serves _next/, _pagefind/, etc.
-  fs.writeFileSync("out/.nojekyll", "");
-
-  // Step 6: Publish to gh-pages
-  execSync("npx gh-pages -d out --dotfiles", { stdio: "inherit" });
-
-  console.log("\n✅ Deployment complete!");
-} catch (err) {
-  console.error("\n❌ Deployment failed:", err);
-} finally {
-  // Step 7: Restore original .gitignore no matter what
-  fs.writeFileSync(GITIGNORE, original);
-  console.log("✅ .gitignore restored");
+if (!fs.existsSync(PAGEFIND_JS)) {
+  throw new Error(
+    `Pagefind index was not generated (missing ${PAGEFIND_JS}).`,
+  );
 }
+
+fs.writeFileSync("out/.nojekyll", "");
+
+ghpages.publish(
+  "out",
+  {
+    dotfiles: true,
+    nojekyll: true,
+    // An old project .gitignore was committed to gh-pages and ignores
+    // _pagefind/, so git add never stages the search index. Remove it
+    // from the publish clone before files are added.
+    beforeAdd: (git) => {
+      const ignorePath = path.join(git.cwd, ".gitignore");
+      if (fs.existsSync(ignorePath)) {
+        fs.unlinkSync(ignorePath);
+      }
+    },
+  },
+  (err) => {
+    if (err) {
+      console.error("\n❌ Deployment failed:", err);
+      process.exit(1);
+    }
+    console.log("\n✅ Deployment complete!");
+  },
+);
