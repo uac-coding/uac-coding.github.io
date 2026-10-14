@@ -87,6 +87,39 @@ pnpm build
 
 # Serve the static output folder locally
 npx serve out
+```
+
+### 🗂️ Table of Contents & Navigation (`_meta.js`)
+
+Nextra uses the `_meta.js` (or `_meta.json`) file located inside your directories to control the sidebar navigation order, titles, and visibility of your pages.
+
+To hide a page from the sidebar navigation while still allowing users to access it via a direct link, set its `display` property to `"hidden"`:
+
+```javascript
+export default {
+  "week-1": "Week 1",
+  "week-2": {
+    display: "hidden"
+  }
+  ...
+}
+```
+
+## 🔍 Pagefind Search & Hiding Content
+
+Nextra's `display: "hidden"` setting in `_meta.js` hides pages from sidebar navigation, but Pagefind will still index their rendered HTML.
+
+To prevent hidden pages or draft content (e.g., upcoming weekly lessons) from appearing in Pagefind search results, wrap the page content in your MDX file with `<div data-pagefind-ignore>`:
+
+```mdx
+<div data-pagefind-ignore>
+
+# Week 2 (Hidden Content)
+
+This page is accessible via direct URL, but its contents will be excluded from search indexing.
+
+</div>
+```
 
 ## 🚢 Deployment
 
