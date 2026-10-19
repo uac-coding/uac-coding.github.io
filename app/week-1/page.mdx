@@ -1,0 +1,237 @@
+import { FolderCode } from 'lucide-react'
+
+# Week One
+
+This first week introduces coding and touches on Python.  We will be asking and thinking about the following questions:
+
+- What is coding?
+- What does a programmer do?
+- What is Python?
+- How do we write and run code?
+
+## Presentation
+
+<GoogleSlides url="https://docs.google.com/presentation/d/e/2PACX-1vTJMucWbRAznWpcr5etBUzHhObjjRHX8C1MnMgAgdK_z2OpFxNJOEFkXtcWdKWHYZgZi_A-QZtsUeWj/pubembed?start=false&loop=false&delayms=0" />
+
+
+## In-Class Activity: The Human Computer Game
+
+Before writing real Python code, let's experience how a programmer and a computer interact! 
+
+<Steps>
+### Get in Pairs
+
+Find a partner and decide who is the **Programmer** and who is the **Computer**.
+
+### Get Your Materials
+
+The **Programmer** is given a secret drawing on a piece of paper. The **Computer** gets a blank sheet of paper and a pencil.
+
+### Understand the Rules
+
+- The Programmer **cannot** see what the Computer is drawing.
+- The Computer **cannot** look at the Programmer's secret drawing.
+
+### Write the Code (1 Minute)
+
+The Programmer has **one minute** to write or speak clear, step-by-step instructions telling the Computer how to recreate the drawing.
+
+### Run the Code
+
+The Computer executes the written instructions exactly as told—without guessing or fixing mistakes!
+
+### Reveal the Output
+
+Compare the final drawing to the original secret paper to see if your code worked!
+</Steps>
+
+### What this teaches us about Python
+
+- **Computers take instructions literally:** If your instructions aren't clear, the computer will draw something completely unexpected!
+- **Programming is clear communication:** Writing code requires precise, logical steps so the computer knows exactly what to do.
+## Activity
+
+In this first activity, you'll explore the Raspberry Pi online Code Editor and tell the computer to say Hello World!
+
+### Concepts you will explore
+
+- **Code editors**: what an editor is for and how it lets us type in and run code (instructions for the computer)
+- **Logging in**: how to create an account and log in so your progress is saved
+- **Editor areas**: where to type code, how to run it, how to save it, and where to see the output
+- **Print statements**: how to say hello with the `print()` command
+- **Comments**: how to leave notes in your code for yourself and others
+
+```python copy
+# Comments 
+# Comments start with '#' and are ignored by Python.
+# You can use them to explain your code or leave notes for yourself.
+# For example: The code below shows how to use the print statement.
+
+# We will use the print statement to instruct the computer to say Hello World!
+print('Hello World!')           # Prints "Hello World!"
+
+# You can also print emojis and math calculations! 
+print('Hello World!🐍')     # Prints "Hello World!🐍"
+print('🐍 can also do math!')
+print(f'{5 * 10}')
+```
+
+
+<Steps>
+### Comments
+
+- Comments start with `#`.  
+- Python ignores them when running your code.  
+- Use comments to **explain your code**, like:
+
+```python copy
+# Comments 
+# Comments start with '#' and are ignored by Python.
+# You can use them to explain your code or leave notes for yourself.
+# For example: The code below shows how to use the print statement.
+```
+
+
+### Print Statements
+
+`print()` shows messages in the output window (or terminal) after you click Run.
+
+```python copy
+print('Hello World! 🐍')
+```
+
+This prints:  
+```
+Hello World! 🐍
+```
+
+Other examples:
+
+```python copy
+print(f'Welcome to 🐍')
+print(f'🐍 can also do math!')
+print(f'{5 * 10}')
+```
+
+Outputs:
+
+```
+Welcome to Python 🐍
+Python 🐍 can also do math!
+50
+```
+
+</Steps>
+
+### Explore Further
+
+- Change the values in the code and see how the output changes.  
+- Add more `print()` statements with your own emojis or math.  
+- Try creating a simple message using your name and favorite emoji!
+
+## Challenges
+
+Choose your difficulty level and put your data type skills to the test!
+
+<br/>
+
+<Cards.Card
+  icon={<FolderCode />}
+  title="Python Editor"
+  href="https://editor.raspberrypi.org/en-US/projects/blank-python-starter"
+  target="_blank"
+  arrow
+/>
+
+<Tabs items={['Beginner', 'Intermediate', 'Advanced']}>
+  <Tab>
+    ### The Digital ID Card
+    Write a Python program that generates a structured digital ID card using exact output formats.
+
+    **Requirements:**
+    1. Include exactly two comment lines at the top containing your name and today's date.
+    2. Use a standard `print()` statement to output the text `Name: [Your Name]`.
+    3. Use an f-string `print()` statement to calculate and output your age next year, assuming your current age is 14 (`14 + 1`).
+
+    **Expected Output:**
+    ```text
+    Name: Alex
+    Age next year: 15
+    ```
+
+    <details>
+    <summary><b>View Solution</b></summary>
+
+    ```python copy
+    # Name: Alex
+    # Date: October 13, 2026
+
+    print("Name: Alex")
+    print(f"Age next year: {14 + 1}")
+    ```
+    </details>
+  </Tab>
+  <Tab>
+    ### The Movie Ticket Receipt
+    Create a script that prints a movie theater receipt and calculates totals using math inside f-strings.
+
+    **Requirements:**
+    1. Include a comment at the top explaining what the script does.
+    2. Use `print()` with an f-string to calculate the cost for 2 movie tickets at $12.50 each.
+    3. Use `print()` with an f-string to calculate the snack cost for 1 popcorn ($6.75) and 2 drinks ($3.50 each).
+    4. Use a final `print()` statement with an f-string to add the ticket cost and snack cost together for the total.
+
+    **Expected Output:**
+    ```text
+    --- MOVIE TICKET RECEIPT ---
+    Tickets Cost: $25.0
+    Snacks Cost: $13.75
+    Total Due: $38.75
+    ```
+
+    <details>
+    <summary><b>View Solution</b></summary>
+
+    ```python copy
+    # Receipt calculator for movie tickets and snacks.
+    # Calculates individual costs and the final total.
+
+    print("--- MOVIE TICKET RECEIPT ---")
+    print(f"Tickets Cost: ${2 * 12.50}")
+    print(f"Snacks Cost: ${6.75 + (2 * 3.50)}")
+    print(f"Total Due: ${25.0 + 13.75}")
+    ```
+    </details>
+  </Tab>
+  <Tab>
+    ### The Geometry Helper
+    Build a script that calculates the area and perimeter of a specific rectangle using precise mathematical formulas.
+
+    **Requirements:**
+    1. Include comments outlining the formulas for Area (`width * length`) and Perimeter (`2 * (width + length)`).
+    2. Print a status line displaying the fixed dimensions: Width = 7.5 meters, Length = 14.2 meters.
+    3. Use an f-string `print()` statement to compute and display the total area.
+    4. Use an f-string `print()` statement to compute and display the total perimeter.
+
+    **Expected Output:**
+    ```text
+    Room Dimensions: Width = 7.5m, Length = 14.2m
+    Calculated Area: 106.5 square meters
+    Calculated Perimeter: 43.4 meters
+    ```
+
+    <details>
+    <summary><b>View Solution</b></summary>
+
+    ```python copy
+    # Geometry calculations for a rectangular room.
+    # Area formula: width * length
+    # Perimeter formula: 2 * (width + length)
+
+    print("Room Dimensions: Width = 7.5m, Length = 14.2m")
+    print(f"Calculated Area: {7.5 * 14.2} square meters")
+    print(f"Calculated Perimeter: {2 * (7.5 + 14.2)} meters")
+    ```
+    </details>
+  </Tab>
+</Tabs>

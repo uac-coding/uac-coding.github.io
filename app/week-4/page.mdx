@@ -1,0 +1,115 @@
+<div data-pagefind-ignore>
+# Week Four
+
+This week we learn about **functions** — named blocks of code that perform a task and can be reused throughout your program.
+
+## Presentation
+
+<GoogleSlides url="https://docs.google.com/presentation/d/e/2PACX-1vRFiyxU1B9zPdRbrdr_tlyYMX5uZIU4xi0btaBH-nph6UfZl0UK0niz-9cyfvf4d9vgubxU3fN_7vNo/pubembed?start=false&loop=false&delayms=0" />
+
+## Functions
+
+A **function** is a named block of code that performs a task. Functions help you organize your code and reuse code instead of writing the same instructions again.
+
+### Function Syntax
+
+Functions in Python follow a specific structure:
+
+```python
+def function_name():
+    # code inside the function
+```
+
+- `def` tells Python you are defining a function  
+- `function_name` is the name you choose (use lowercase and underscores)  
+- The parentheses `()` are required  
+- The colon `:` tells Python the function code is starting  
+- All lines inside the function must be **indented**
+
+### Defining a Function
+
+```python copy
+def say_hello():
+    print("Hello!")
+```
+
+This defines the function but does not run it yet.
+
+### Indentation Matters
+
+Python uses **indentation** to know which lines belong to a function.
+
+```python copy
+def show_message():
+    print("This line is inside the function")
+print("This line is outside the function")
+```
+
+Only the indented line runs when the function is called.
+
+### Calling a Function
+
+To run a function, write its name followed by parentheses.
+
+```python copy
+say_hello()
+```
+
+The code inside the function runs from top to bottom.
+
+### Functions Can Have Multiple Lines
+
+```python copy
+def start_program():
+    print("Program starting...")
+    print("Loading...")
+    print("Ready!")
+
+start_program()
+```
+
+### Why Functions Are Useful
+
+- Organize code  
+- Reduce repetition  
+- Make programs easier to read  
+- Control when code runs  
+
+Functions group instructions together so you can use them whenever you need.
+
+## Modules
+
+A **module** is a file that contains extra code you can use in your program. Modules let you use features that are already written, instead of creating everything from scratch.
+
+Python comes with many **built-in modules**.
+
+### Importing a Module
+
+To use a module, you must **import** it first.
+
+```python copy
+import random
+```
+
+This gives your program access to everything inside the `random` module.
+
+### Using a Module
+
+After importing, you use the module name followed by a dot `.` and the function you want.
+
+```python copy
+import random
+
+number = random.randint(1, 10)
+print(number)
+```
+
+- `random.randint(1, 10)` gives a random number between 1 and 10  
+
+### Why Modules Matter
+
+- Save time
+- Keep code clean
+- Use powerful tools easily
+- Share code between programs
+</div>

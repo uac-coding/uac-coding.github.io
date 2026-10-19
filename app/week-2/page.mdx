@@ -1,0 +1,166 @@
+import { FolderCode } from 'lucide-react'
+
+# Week Two: Data Types
+
+In this second week, we dive into how Python categorizes different kinds of information without using variables yet. We will be asking and thinking about the following questions:
+- What is a data type?
+- What is the difference between text (strings), whole numbers (integers), decimals (floats), and true/false values (booleans)?
+- How does Python recognize different values directly?
+- How do we check a data type using `type()`?
+
+## Presentation
+
+<GoogleSlides />
+
+## Activity
+
+In this activity, you'll explore Python's core data types by printing values and exploring how Python treats different kinds of information.
+
+### Concepts you will explore
+- **Strings (`str`)**: Text enclosed in quotes (e.g., `"Genesis"`).
+- **Integers (`int`)**: Whole numbers without decimals (e.g., `40`).
+- **Floats (`float`)**: Decimal numbers (e.g., `3.5`).
+- **Booleans (`bool`)**: True or False values representing logic (e.g., `True`).
+- **The `type()` function**: How to ask Python what data type a specific value is.
+
+```python copy
+# Printing different data types directly
+print("Book of John")         # String (str)
+print(12)                     # Integer (int)
+print(7.77)                   # Float (float)
+print(True)                   # Boolean (bool)
+```
+
+### Explore Further
+
+- Try printing favorite Bible verses or chapter numbers using different data types.
+- Experiment with what happens when you put numbers inside quotes versus leaving them unquoted.
+
+## Challenges
+
+Choose your difficulty level and put your data type skills to the test!
+
+<br/>
+
+<Cards.Card
+  icon={<FolderCode />}
+  title="Python Editor"
+  href="https://editor.raspberrypi.org/en-US/projects/blank-python-starter"
+  target="_blank"
+  arrow
+/>
+
+<Tabs items={['Beginner', 'Intermediate', 'Advanced']}>
+    <Tab>
+        ### The Scripture Info Printer
+        Write a Python program that uses print statements to display information about a Bible book using strings, integers, and booleans.
+
+        **Requirements:**
+        1. Print the name of a Bible book as a string.
+        2. Print the total number of chapters as an integer.
+        3. Print a boolean value representing whether it is in the New Testament (`True` or `False`).
+
+        **Expected Output:**
+        ```text
+        Genesis
+        50
+        New Testament: False
+        ```
+
+        <details>
+        <summary><b>View Solution</b></summary>
+
+        ```python copy
+        # Scripture info printer
+        print("Genesis")
+        print(50)
+        print("New Testament:", False)
+        ```
+        </details>
+    </Tab>
+    <Tab>
+        ### The Ark Animals Manifest
+        Check the passage below to see how many pairs of clean and unclean animals and birds Noah brought onto the ark based on **Genesis 7:2-3**.
+
+        <details>
+        <summary><b>View Genesis 7:2-3 (NASB) Passage</b></summary>
+        > *"You shall take with you of every clean animal by sevens, a male and his female; and of the animals that are not clean two, a male and his female; also of the birds of the sky, by sevens, male and female, to keep offspring alive on the face of all the earth."*
+        </details>
+
+        Create a script using `print()` statements that follows the table below to display each creature, its pair count, and whether it is clean. Use the reference links to check the specific details for each animal.
+
+        | Animal / Bird | Pair Count | Clean Status | Bible Reference |
+        | :--- | :--- | :--- | :--- |
+        | **Sheep** | `7` | `True` | [Leviticus 11:3](https://www.biblegateway.com/passage/?search=Leviticus+11%3A3&version=NASB) |
+        | **Pig** | `2` | `False` | [Leviticus 11:7](https://www.biblegateway.com/passage/?search=Leviticus+11%3A7&version=NASB) |
+        | **Dove** | `7` | `True` | [Genesis 8:8-9](https://www.biblegateway.com/passage/?search=Genesis+8%3A8-9&version=NASB) |
+        | **Raven** | `2` | `False` | [Genesis 8:7](https://www.biblegateway.com/passage/?search=Genesis+8%3A7&version=NASB) |
+
+        **Expected Output:**
+        ```text
+        Animal: Sheep - Pairs: 7 - Clean: True
+        Animal: Pig - Pairs: 2 - Clean: False
+        Animal: Dove - Pairs: 7 - Clean: True
+        Animal: Raven - Pairs: 2 - Clean: False
+        ```
+
+        <details>
+        <summary><b>View Solution</b></summary>
+
+        ```python copy
+        # Ark manifest based on Genesis 7:2-3 and research references
+        print("Animal: Sheep - Pairs: 7 - Clean:", True)
+        print("Animal: Pig - Pairs: 2 - Clean:", False)
+        print("Animal: Dove - Pairs: 7 - Clean:", True)
+        print("Animal: Raven - Pairs: 2 - Clean:", False)
+        ```
+        </details>
+     </Tab>
+     <Tab>
+        ### The Scripture Data Type Inspector
+        Build an advanced script that prints a header, shows scripture values, uses a divider line (`=====`), displays their corresponding data types using `type()`, and ends with a footer.
+
+        *Note for context:* The entire Bible contains **1,189 total chapters**. The Book of Psalms has **150 chapters**, making up roughly `12.61%` of all chapters in the Bible, and Psalms is part of the Old Testament (`True` for Old Testament).
+
+        **Requirements:**
+        1. Print a header: `=== BIBLE DATA INSPECTOR ===`.
+        2. Print four separate labeled values: Verse, Chapters, Percentage, and Old Testament status.
+        3. Print a divider line: `=====`.
+        4. Print four separate labeled lines using `type()` to reveal the data type for each value in order.
+        5. Print a footer: `=== INSPECTION COMPLETE ===`.
+
+        **Expected Output:**
+        ```text
+        === BIBLE DATA INSPECTOR ===
+        Verse: Psalm 23:1
+        Chapters: 150
+        Percentage: 12.61
+        Old Testament: True
+        =====
+        Verse Type: <class 'str'>
+        Chapters Type: <class 'int'>
+        Percentage Type: <class 'float'>
+        Old Testament Type: <class 'bool'>
+        === INSPECTION COMPLETE ===
+        ```
+
+        <details>
+        <summary><b>View Solution</b></summary>
+
+        ```python copy 
+        # Data type inspector script with header and footer 
+        print("=== BIBLE DATA INSPECTOR ===") 
+        print("Verse: Psalm 23:1") 
+        print("Chapters:", 150) 
+        print("Percentage:", 12.61) 
+        print("Old Testament:", True)          
+        print("=====")          
+        print("Verse Type:", type("Psalm 23:1")) 
+        print("Chapters Type:", type(150)) 
+        print("Percentage Type:", type(12.61)) 
+        print("Old Testament Type:", type(True)) 
+        print("=== INSPECTION COMPLETE ===")
+        ```
+        </details>
+    </Tab>
+</Tabs>
