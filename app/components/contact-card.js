@@ -16,7 +16,8 @@ export const RoleCard = ({
                 x:flex x:flex-col x:overflow-hidden x:rounded-xl
                 x:border x:border-gray-200 x:dark:border-neutral-800
                 x:bg-white x:dark:bg-neutral-900
-                x:shadow-sm" >
+                x:shadow-sm"
+        >
             {/* Avatar (full-width) */}
             {avatar && (
                 <div className="x:aspect-[4/3] x:w-full x:overflow-hidden">
@@ -41,8 +42,6 @@ export const RoleCard = ({
                         </span>
                     )}
                 </div>
-
-
             </div>
         </div>
     )
@@ -54,9 +53,11 @@ export const RoleCard = ({
 export const ContactCards = ({ children, cols = 3 }) => {
     return (
         <div
-            className="x:grid x:gap-4 not-prose"
+            className="x:grid x:gap-4 not-prose x:grid-cols-1 sm:x:grid-cols-2 md:x:grid-cols-3"
             style={{
-                gridTemplateColumns: `repeat(${cols}, minmax(0, 1fr))`
+                // Fallback / standard grid template with auto-fit using CSS minmax:
+                // Cards stay at least 220px wide, automatically wrapping onto new lines on small screens
+                gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 220px), 1fr))'
             }}
         >
             {children}
