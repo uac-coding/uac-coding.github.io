@@ -1,11 +1,10 @@
-<div data-pagefind-ignore>
 # Week Three
 
 This week we learn about **variables** — containers that store information so you can use it later in your program.
 
 ## Presentation
 
-<GoogleSlides url="https://docs.google.com/presentation/d/e/2PACX-1vRFiyxU1B9zPdRbrdr_tlyYMX5uZIU4xi0btaBH-nph6UfZl0UK0niz-9cyfvf4d9vgubxU3fN_7vNo/pubembed?start=false&loop=false&delayms=0" />
+<GoogleSlides />
 
 ## Variables
 
@@ -66,15 +65,110 @@ Hello, Alex!
 print("This is output!")
 ```
 
-## Activity
+## Inputs
 
-Try changing the values of variables and see how the output changes. Add more `print()` statements with your own emojis or messages!
+`input()` lets you get information from the user. It pauses the program and waits for the user to type something, which you can then store in a variable.
 
-```python copy filename="variables.py"
-pet = "dog"
-emoji = "🐶"
-count = 3
-
-print(f"I have {count} {pet}s {emoji}")
+```python copy
+name = input("What is your name? ")
+print(f"Nice to meet you, {name}!")
 ```
-</div>
+
+- Whatever the user types is stored as text (a string) in the variable.
+- You can pass a prompt message inside `input(...)` to tell the user what to type.
+
+💡 Tip: `input()` always treats what the user types as text, even if they type a number!
+
+## Typecasting
+
+Because `input()` always returns text (a string), you need to convert it if you want to perform math with numbers. Converting data from one type to another is called **typecasting**.
+
+- `int()` converts a string into a whole number (integer).
+- `float()` converts a string into a decimal number.
+- `str()` converts a number back into a string.
+
+```python copy
+age = int(input("How old are you? "))
+print(f"Next year, you will be {age + 1} years old!")
+```
+
+## Challenges
+
+<Tabs items={['Beginner', 'Intermediate', 'Advanced']}>
+    <Tab>
+        ### The Bible Character Greeter
+        Write a Python program that asks the user for their favorite Bible character using `input()` and prints a personalized greeting using f-strings.
+
+        **Requirements:**
+        1. Prompt the user for their favorite Bible character and store it in a variable.
+        2. Use an f-string to print a friendly greeting mentioning that character.
+
+        **Expected Output (if user types "David"):**
+        ```text
+        Who is you favourite Bible hero? David
+        That's awesome! David is a wonderful example of faith.
+        ```
+
+        <details>
+        <summary><b>View Solution</b></summary>
+
+        ```python copy
+        # Bible character greeter
+        character = input("Who is you favourite Bible hero? ")
+        print(f"That's awesome! {character} is a wonderful example of faith.")
+        ```
+        </details>
+    </Tab>
+    <Tab>
+        ### The Tithe Calculator
+        Based on the principle of giving in **Malachi 3:10**, write a program that asks the user for their weekly income using `input()`, typecasts it to a float, and calculates a 10% tithe.
+
+        **Requirements:**
+        1. Prompt the user for their weekly income.
+        2. Typecast the input string into a float value.
+        3. Multiply the income by `0.1` to calculate the tithe.
+        4. Print the final tithe amount using an f-string.
+
+        **Expected Output (if user types "500"):**
+        ```text
+        Enter your weekly income: 500
+        Your calculated tithe (10%) is: 50.0
+        ```
+
+        <details>
+        <summary><b>View Solution</b></summary>
+
+        ```python copy
+        # Tithe calculator based on Malachi 3:10
+        income_str = input("Enter your weekly income: ")
+        income = float(income_str)
+        tithe = income * 0.1
+        print(f"Your calculated tithe (10%) is: {tithe}")
+        ```
+        </details>
+     </Tab>
+     <Tab>
+        ### Bible Reading Progress Tracker
+        The entire Bible contains **1,189 chapters**. Write an advanced script that prompts the user for how many chapters they have read, typecasts the input to an integer, calculates how many chapters are left, and computes their reading completion percentage.
+
+        **Requirements:**
+        1. Prompt the user for the number of chapters they have read so far.
+        2. Typecast the input into an integer.
+        3. Calculate the remaining chapters out of `1189`.
+        4. Calculate the percentage completed rounded to 2 decimal places.
+        5. Print a clear summary showing chapters read, chapters remaining, and percentage complete.
+
+        **Expected Output (if user types "300"):**
+        ```text
+        Chapters read: 300
+        Chapters remaining: 889
+        Progress: 25.23% complete!
+        ```
+
+        <details>
+        <summary><b>View Solution</b></summary>
+
+        ```python copy # Bible reading progress tracker total_chapters = 1189 read_input = input("How many Bible chapters have you read? ") chapters_read = int(read_input)  chapters_remaining = total_chapters - chapters_read percentage = (chapters_read / total_chapters) * 100  print(f"Chapters read: {chapters_read}") print(f"Chapters remaining: {chapters_remaining}") print(f"Progress: {percentage:.2f}\% complete!") ```
+        </details>
+    </Tab>
+</Tabs>
