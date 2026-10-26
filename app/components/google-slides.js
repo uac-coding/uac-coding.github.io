@@ -3,11 +3,11 @@
 import React, { useState } from 'react'
 import Image from 'next/image' // Recommended if you are using Next.js, or use a standard <img> tag
 
-export const GoogleSlides = ({ url }) => {
+export const GoogleSlides = ({ url, comingSoon=false }) => {
   const [isLoading, setIsLoading] = useState(true)
 
   // If no URL is provided, display the coming soon image
-  if (!url) {
+  if (!url || comingSoon) {
     return (
       <div style={{ position: 'relative', paddingBottom: '58%', height: 0, overflow: 'hidden', marginTop: '1.25rem' }}>
         <img
