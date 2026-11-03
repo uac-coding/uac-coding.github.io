@@ -7,9 +7,7 @@ export default {
   "week-1": "Week 1",
   "week-2": "Week 2",
   "week-3": "Week 3",
-  "week-4": {
-    display: "hidden"
-  },
+  "week-4": "Week 4",
   "week-5": {
     display: "hidden"
   },

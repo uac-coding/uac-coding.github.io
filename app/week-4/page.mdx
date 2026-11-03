@@ -1,115 +1,183 @@
-<div data-pagefind-ignore>
 # Week Four
 
-This week we learn about **functions** — named blocks of code that perform a task and can be reused throughout your program.
+This week we learn about operators and conditionals. You will discover how to compare values and make decisions in your program based on True or False answers.
 
 ## Presentation
 
-<GoogleSlides url="https://docs.google.com/presentation/d/e/2PACX-1vRFiyxU1B9zPdRbrdr_tlyYMX5uZIU4xi0btaBH-nph6UfZl0UK0niz-9cyfvf4d9vgubxU3fN_7vNo/pubembed?start=false&loop=false&delayms=0" />
+<GoogleSlides url="https://docs.google.com/presentation/d/e/2PACX-1vRGzlAd8Fw7SlRXSw_TRPBWDs8D5NxS_vfLYvGgBHe8rdtJut5IIOyc65eXtgcZKA/pubembed" comingSoon />
 
-## Functions
+## Operators
 
-A **function** is a named block of code that performs a task. Functions help you organize your code and reuse code instead of writing the same instructions again.
+Operators are special symbols or keywords used to perform computations, comparisons, and logic evaluations on values and variables.
 
-### Function Syntax
+### Relational Operators
 
-Functions in Python follow a specific structure:
+Relational operators compare how two variables or values relate to each other. They always evaluate to a boolean value of either True or False.
 
-```python
-def function_name():
-    # code inside the function
-```
-
-- `def` tells Python you are defining a function  
-- `function_name` is the name you choose (use lowercase and underscores)  
-- The parentheses `()` are required  
-- The colon `:` tells Python the function code is starting  
-- All lines inside the function must be **indented**
-
-### Defining a Function
+| Operator | Name | Explanation | Example | Result |
+| :--- | :--- | :--- | :--- | :--- |
+| `==` | Equal to | Checks if two values are identical to each other. | `5 == 5` | `True` |
+| `!=` | Not equal | Checks if two values are different from each other. | `5 != 3` | `True` |
+| `>` | Greater than | Checks if the value on the left is strictly larger than the right. | `5 > 3` | `True` |
+| `<` | Less than | Checks if the value on the left is strictly smaller than the right. | `3 < 5` | `True` |
+| `>=` | Greater or equal | Checks if the left value is larger than or equal to the right. | `5 >= 5` | `True` |
+| `<=` | Less or equal | Checks if the left value is smaller than or equal to the right. | `3 <= 5` | `True` |
 
 ```python copy
-def say_hello():
-    print("Hello!")
+print(5 == 5)  # True
+print(5 != 3)  # True
+print(5 > 3)   # True
+print(5 < 3)   # False
 ```
 
-This defines the function but does not run it yet.
+### Logical Operators
 
-### Indentation Matters
+Logical operators allow you to combine multiple True or False conditions to make complex decisions.
 
-Python uses **indentation** to know which lines belong to a function.
+| Operator | Name | Explanation | Example | Result |
+| :--- | :--- | :--- | :--- | :--- |
+| `and` | Logical AND | Evaluates to True only if both conditions are True at the same time. | `True and False` | `False` |
+| `or` | Logical OR | Evaluates to True if at least one of the conditions is True. | `True or False` | `True` |
+| `not` | Logical NOT | Reverses the boolean outcome, turning True to False and vice versa. | `not True` | `False` |
+
+#### Example using AND
 
 ```python copy
-def show_message():
-    print("This line is inside the function")
-print("This line is outside the function")
+grade = 6
+
+if grade >= 6 and grade <= 12:
+    print("You can join the club!")
+else:
+    print("Sorry, you cannot join.")
 ```
 
-Only the indented line runs when the function is called.
-
-### Calling a Function
-
-To run a function, write its name followed by parentheses.
+#### Example using OR
 
 ```python copy
-say_hello()
+age = 18
+
+if age < 12 or age > 65:
+    print("You get the discount!")
+else:
+    print("Regular price.")
 ```
 
-The code inside the function runs from top to bottom.
+## Conditionals
 
-### Functions Can Have Multiple Lines
+Conditionals let your program branch and execute different blocks of code depending on whether specific conditions are met. Instead of running every line in order, the computer checks questions and chooses a path.
+
+| Keyword | Name | Explanation | Example |
+| :--- | :--- | :--- | :--- |
+| `if` | If Statement | The starting check. If the condition is True, its indented code block runs. | `if temperature > 25:` |
+| `elif` | Else If Statement | A secondary check evaluated only if the preceding conditions were False. | `elif temperature > 10:` |
+| `else` | Else Statement | A catch all default block that runs when all previous conditions fail. | `else:` |
+
+### Example: What should I wear today?
 
 ```python copy
-def start_program():
-    print("Program starting...")
-    print("Loading...")
-    print("Ready!")
+temperature = 15
 
-start_program()
+if temperature > 25:
+    print("Wear a shirt")
+elif temperature > 10:
+    print("Wear a light jacket")
+else:
+    print("Wear a heavy jacket")
 ```
 
-### Why Functions Are Useful
+## Challenges
 
-- Organize code  
-- Reduce repetition  
-- Make programs easier to read  
-- Control when code runs  
+<Tabs items={['Beginner', 'Intermediate', 'Advanced']}>
+    <Tab>
+        ### The Church Volunteer Age Checker
+        Write a Python program that asks the user for their age using input, typecasts it to an integer, and uses an if statement to check if they are old enough to help in the media ministry.
 
-Functions group instructions together so you can use them whenever you need.
+        **Requirements:**
+        1. Prompt the user for their age.
+        2. Typecasts the input into an integer.
+        3. Use an if or else statement to check if the user is 16 or older.
 
-## Modules
+        **Expected Output (if user types 17):**
+        ```text
+        Enter your age: 17
+        You are cleared to join the media ministry team!
+        ```
 
-A **module** is a file that contains extra code you can use in your program. Modules let you use features that are already written, instead of creating everything from scratch.
+        <details>
+        <summary><b>View Solution</b></summary>
 
-Python comes with many **built-in modules**.
+        ```python copy
+        # Media ministry volunteer age checker
+        age_str = input("Enter your age: ")
+        age = int(age_str)
 
-### Importing a Module
+        if age >= 16:
+            print("You are cleared to join the media ministry team!")
+        else:
+            print("Thank you for your interest! You can join when you turn 16.")
+        ```
+        </details>
+    </Tab>
+    <Tab>
+        ### The Church Ministry Grade Placement
+        Write a program that uses conditionals and relational operators to sort students into the correct church ministry based on their school grade (Children's Ministry for up to grade 5, Extension for grade 6, and In Service for older than grade 6).
 
-To use a module, you must **import** it first.
+        **Requirements:**
+        1. Prompt the user for their school grade (typecasted to an integer).
+        2. Use `if`, `elif`, and `else` statements to assign them to Children's Ministry, Extension, or In Service.
 
-```python copy
-import random
-```
+        **Expected Output (if user types 6):**
+        ```text
+        Enter your school grade: 6
+        Placement: Extension Program
+        ```
 
-This gives your program access to everything inside the `random` module.
+        <details>
+        <summary><b>View Solution</b></summary>
 
-### Using a Module
+        ```python copy
+        # Church ministry grade placement
+        grade_str = input("Enter your school grade: ")
+        grade = int(grade_str)
 
-After importing, you use the module name followed by a dot `.` and the function you want.
+        if grade <= 5:
+            print("Placement: Children's Ministry")
+        elif grade == 6:
+            print("Placement: Extension Program")
+        else:
+            print("Placement: In Service")
+        ```
+        </details>
+     </Tab>
+     <Tab>
+        ### The Church Event Budget Tier Classifier
+        Write an advanced script that prompts the user for a church youth camp registration count and uses if, elif, and else statements to determine the event venue tier and bus requirements.
 
-```python copy
-import random
+        **Requirements:**
+        1. Prompt the user for the number of camp attendees (typecasted to an integer).
+        2. If attendees are less than 50, assign " Chapel Hall and 1 Mini Bus".
+        3. If attendees are between 50 and 150 inclusive, assign " Main Sanctuary and 2 Coaches".
+        4. Otherwise, assign " Conference Center and Full Fleet".
 
-number = random.randint(1, 10)
-print(number)
-```
+        **Expected Output (if user types 85):**
+        ```text
+        Enter camp attendee count: 85
+        Assigned Venue and Transport: Main Sanctuary and 2 Coaches
+        ```
 
-- `random.randint(1, 10)` gives a random number between 1 and 10  
+        <details>
+        <summary><b>View Solution</b></summary>
 
-### Why Modules Matter
-
-- Save time
-- Keep code clean
-- Use powerful tools easily
-- Share code between programs
-</div>
+        ```python copy 
+        # Church event logistics planner 
+        attendees_str = input("Enter camp attendee count: ") 
+        attendees = int(attendees_str)          
+        if attendees < 50: 
+            print("Assigned Venue and Transport: Youth Room and 1 Mini Bus") 
+        elif attendees >= 50 and attendees <= 150: 
+            print("Assigned Venue and Transport: Main Sanctuary and 2 Coaches") 
+            else: print("Assigned Venue and Transport: Conference Center and Full Fleet")
+        ```
+        </details>
+    </Tab>
+</Tabs>
