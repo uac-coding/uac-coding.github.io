@@ -1,221 +1,199 @@
-<div data-pagefind-ignore>
-import { Code, Form, Presentation, List } from 'lucide-react'
-
 # Week Five
 
-This week we learn how to **store multiple values** using **lists** and how to
-**access, modify, and check items** inside them.
-
-By the end of this lesson, your programs will be able to **remember more than one thing at a time**.
+This week we learn about **Lists** — containers that allow you to store multiple items in a single variable.
 
 ## Presentation
 
-<GoogleSlides url="https://docs.google.com/presentation/d/e/2PACX-1vSe8K71uFs_i_3AOGCzI8tyxln1h8W_GQCKOCqQra28Ekcb97_CZWM6ho0bSUlS-DlekX4OvK7qxx9I/pubembed?start=false&loop=false&delayms=0" />
+<GoogleSlides comingSoon url="https://docs.google.com/presentation/d/1d7qFU2iqmy72TUgzdwLcKgCOQMo3mGL3/pubembed"/>
 
-## Variables vs. Lists
+## Lists
 
-### Single Variables
+A **list** stores many values inside a single variable. Real-life examples of lists include a shopping list or a list of tasks.
 
-A variable stores **one value**.
-
-```python copy
-name = "Alex"
-```
-
-If we want to store more than one name, this doesn't work very well.
-
-### Lists
-
-A **list** stores **many values** in one variable.
+In Python, lists are created using square brackets `[]` with items separated by commas:
 
 ```python copy
-names = ["Alex", "Jordan", "Sam"]
+fruits = ["apple", "banana", "cherry"]
+numbers = [1, 2, 3, 4, 5]
+mixed = ["Alex", 12, True]
 ```
 
-## Creating Lists
+---
 
-Lists use **square brackets** `[]`.
+### Index
+
+Each item in a list has a position number called an **index**. 
+
+💡 **Important:** Indexes start at `0`!
+
+| Index | Item |
+| :--- | :--- |
+| `0` | `"apple"` |
+| `1` | `"banana"` |
+| `2` | `"cherry"` |
 
 ```python copy
-colors = ["red", "blue", "green"]
+fruits = ["apple", "banana", "cherry"]
+
+print(fruits[0])  # Output: apple
+print(fruits[1])  # Output: banana
+print(fruits[2])  # Output: cherry
 ```
 
-An empty list:
+---
+
+### Length
+
+Use `len()` to get the total number of items in a list.
 
 ```python copy
-items = []
+fruits = ["apple", "banana", "cherry"]
+print(len(fruits))  # Output: 3
 ```
 
-<Callout type="info">
-Lists keep items in order. The order matters.
-</Callout>
+---
 
-## Indexing Lists
+### Append
 
-Each item in a list has a **position number** called an **index**.
-
-<Callout type="important">
-Indexes start at **0**.
-</Callout>
+Use `.append()` to add a new item to the **end** of a list.
 
 ```python copy
-colors = ["red", "blue", "green"]
-
-print(colors[0])  # red
-print(colors[1])  # blue
-print(colors[2])  # green
+fruits = ["apple", "banana"]
+fruits.append("cherry")
+print(fruits)  # Output: ['apple', 'banana', 'cherry']
 ```
 
-### Changing Items
+---
+
+### Remove
+
+Use `.remove()` to remove a specific item from a list.
 
 ```python copy
-colors[1] = "yellow"
-print(colors)
+fruits = ["apple", "banana", "cherry"]
+fruits.remove("banana")
+print(fruits)  # Output: ['apple', 'cherry']
 ```
 
-Result:
-```
-['red', 'yellow', 'green']
-```
+---
 
-<Callout type="warning">
-Using an index that doesn't exist will cause an error.
-</Callout>
+## Challenges
 
-## List Length
+<Tabs items={['Beginner', 'Intermediate', 'Advanced']}>
+    <Tab>
+        ### Torah Books List Inspector
+        The **Torah** (meaning "instruction" or "teaching") refers to the first five books of the Bible, also known as the Law or the Five Books of Moses. 
 
-Use `len()` to find how many items are in a list.
+        | Book | Theme |
+        | :--- | :--- |
+        | Genesis | Creation, early history, and God's covenant with the patriarchs. |
+        | Exodus | Liberation from Egypt, the Ten Commandments, and the Tabernacle. |
+        | Leviticus | Laws, holy living, and worship instructions. |
+        | Numbers | The 40-year journey of Israel wandering in the wilderness. |
+        | Deuteronomy | Moses' final speeches reviewing the Law before entering the Promised Land. |
 
-```python copy
-numbers = [3, 7, 2]
-print(len(numbers))
-```
+        Write a Python program that creates a list of the 5 books of the Torah, prints the first item (at index 0), and then prints the total number of items in the list.
 
-## Adding Items to a List
+        **Requirements:**
+        1. Create a list called `torah_books` with the 5 books of the Torah: `"Genesis"`, `"Exodus"`, `"Leviticus"`, `"Numbers"`, and `"Deuteronomy"`.
+        2. Print the first book using index `0`.
+        3. Print the total count of books using `len()`.
 
-You can add new colors to a list using `append()`.
+        **Expected Output:**
+        ```text
+        First book of the Torah: Genesis
+        Total books in the Torah: 5
+        ```
 
-### `append()`
+        <details>
+        <summary><b>View Solution</b></summary>
 
-`append()` adds an item to the **end** of a list.
+        ```python copy
+        # Torah books list inspector
+        torah_books = ["Genesis", "Exodus", "Leviticus", "Numbers", "Deuteronomy"]
 
-```python copy
-colors = ["red", "blue"]
-colors.append("green")
-print(colors)
-# ['red', 'blue', 'green']
-```
+        print(f"First book of the Torah: {torah_books[0]}")
+        print(f"Total books in the Torah: {len(torah_books)}")
+        ```
+        </details>
+    </Tab>
+    <Tab>
+        ### Sunday School Attendance Tracker
+        Write a Python program that starts with a list of Sunday school students. The user will be prompted to enter a new student's name, which will be added to the list using `.append()`. Finally, display the updated list and total student count.
 
-After running this code:
-- `"green"` is added to the end of the list
-- The list now has **three colors**
+        **Requirements:**
+        1. Create a starting list of students: `["Daniel", "Esther", "Samuel"]`.
+        2. Prompt the user to enter a new student name using `input()`.
+        3. Add the new student to the end of the list using `.append()`.
+        4. Print the updated list and total count using `len()`.
 
-### Using Input to Add a Color
+        **Expected Output (if user types "Ruth"):**
+        ```text
+        Enter new student name: Ruth
+        Updated Students: ['Daniel', 'Esther', 'Samuel', 'Ruth']
+        Total Students: 4
+        ```
 
-You can also add a color using user input.
+        <details>
+        <summary><b>View Solution</b></summary>
 
-```python copy
-colors = ["red", "blue"]
+        ```python copy
+        # Sunday school attendance tracker
+        students = ["Daniel", "Esther", "Samuel"]
 
-new_color = input("Enter a color to add: ")
-colors.append(new_color)
+        new_student = input("Enter new student name: ")
+        students.append(new_student)
 
-print(colors)
-```
+        print(f"Updated Students: {students}")
+        print(f"Total Students: {len(students)}")
+        ```
+        </details>
+     </Tab>
+     <Tab>
+        ### Church Outreach Prayer Request Manager
+        Write an advanced script that manages a list of prayer requests. The program displays the current prayer items, lets the user choose an item to remove (once answered), adds a new prayer request, and prints out the finalized list.
 
-<Callout type="info">
-`append()` always adds the item to the end of the list.
-</Callout>
+        **Requirements:**
+        1. Start with a prayer request list: `["Healing for John", "Travel safety for Sarah", "Provision for family", "Wisdom for leaders"]`.
+        2. Prompt the user to enter a prayer request to remove (e.g., when answered).
+        3. Remove that item from the list using `.remove()`.
+        4. Prompt the user to enter a new prayer request to add.
+        5. Append the new prayer request to the list.
+        6. Print the finalized prayer list and its total item count.
 
-## Comparing a List Item to a Value
+        **Expected Output (if user removes "Provision for family" and adds "Peace for community"):**
+        ```text
+        Current Prayer Requests: ['Healing for John', 'Travel safety for Sarah', 'Provision for family', 'Wisdom for leaders']
+        Enter answered prayer to remove: Provision for family
+        Enter new prayer request: Peace for community
+        Final Prayer List: ['Healing for John', 'Travel safety for Sarah', 'Wisdom for leaders', 'Peace for community']
+        Total active prayer requests: 4
+        ```
 
-You can compare a **specific item in a list** to a value using its **index**.
+        <details>
+        <summary><b>View Solution</b></summary>
 
-This lets your program make decisions based on **what is stored in the list**.
+        ```python copy 
+        # Church Outreach Prayer Request Manager
 
-### Example: Checking a List Item
+        prayer_requests = [
+            "Healing for John",
+            "Travel safety for Sarah",
+            "Provision for family",
+            "Wisdom for leaders"
+        ]
 
-```python copy
-colors = ["red", "blue", "green"]
+        print(f"Current Prayer Requests: {prayer_requests}")
 
-if colors[0] == "red":
-    print("The first color is red!")
-```
+        answered_prayer = input("Enter answered prayer to remove: ")
+        prayer_requests.remove(answered_prayer)
 
-In this example:
-- `colors[0]` means **the first item**
-- The program compares it to `"red"`
-- If they match, the message prints
+        new_prayer = input("Enter new prayer request: ")
+        prayer_requests.append(new_prayer)
 
-### Using Input with List Indexes
-
-You can compare user input to an item in a list.
-
-```python copy
-answers = ["A", "B"]
-
-choice = input("Choose A or B: ")
-
-if choice == answers[0]:
-    print("You chose A!")
-elif choice == answers[1]:
-    print("You chose B!")
-```
-
-### Comparing Numbers in a List
-
-Lists can also store numbers.
-
-```python copy
-scores = [85, 92]
-
-if scores[1] >= 90:
-    print("High score!")
-```
-
-Here:
-- `scores[1]` is `92`
-- The condition checks if it is **greater than or equal to 90**
-
-<Callout type="info">
-Always make sure the index exists before comparing it.
-</Callout>
-
-## Classroom Example
-
-```python copy filename="classroom.py"
-# Make a list of fruits
-fruitlist = ["apple", "banana", "cherry"]
-
-# Print the list out
-print(fruitlist)
-
-# Each item in the list has an "index" - which is it's position in the list
-# In Python the index starts at 0, we acccess the item using square brackets and the position
-
-# Examples:
-# Print the first fruit in the list
-
-# Print the second fruit in the list
-
-# Print the third fruit in the list
-
-# What happens if I try to access an item in position 4?
-
-# How to add something at the end of the list?
-fruitlist.append("orange")
-
-# Print the entire list
-print(fruitlist)
-
-# Now try to acccess the item at position 4
-
-# Print how many fruit are in the list
-print(len(fruitlist))
-
-# To use len() to access last item in the list
-# print(fruitlist[len(fruitlist)-1])
-
-# https://www.w3schools.com/python/python_lists_methods.asp
-```
-</div>
+        print(f"Final Prayer List: {prayer_requests}")
+        print(f"Total active prayer requests: {len(prayer_requests)}")
+        ```
+        </details>
+    </Tab>
+</Tabs>
