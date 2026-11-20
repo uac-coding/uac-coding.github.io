@@ -1,129 +1,205 @@
-<div data-pagefind-ignore>
 # Week Six
 
-This week we learn about **loops** — a way to repeat code multiple times without writing the same lines over and over.
+This week we learn about **Loops** — coding structures that allow you to repeat instructions automatically without writing the same code over and over again.
 
 ## Presentation
 
-<GoogleSlides url="https://docs.google.com/presentation/d/e/2PACX-1vRFiyxU1B9zPdRbrdr_tlyYMX5uZIU4xi0btaBH-nph6UfZl0UK0niz-9cyfvf4d9vgubxU3fN_7vNo/pubembed?start=false&loop=false&delayms=0" />
+<GoogleSlides comingSoon url="https://docs.google.com/presentation/d/10D1N2-DzLTSTx5IWzAU3mwaeaD4kmfmv/pubembed"/>
 
-## Why Loops?
+## Loops
 
-Sometimes you want your program to do the same thing many times. Instead of copying and pasting code, you use a **loop**.
+A **loop** tells a computer to repeat a block of code until a specific stopping condition is met. 
 
+Instead of writing repetitive commands line by line:
 ```python copy
-# Without a loop — repetitive!
-print("Hello!")
-print("Hello!")
-print("Hello!")
-
-# With a loop — much cleaner!
-for i in range(3):
-    print("Hello!")
+print("Clap")
+print("Clap")
+print("Clap")
+print("Clap")
 ```
 
-## For Loops
+We can use a loop to make our code shorter, cleaner, and less prone to errors!
 
-A **for loop** repeats code for each item in a sequence.
+---
 
-### Looping Over a List
+### For Loop
 
-```python copy
-colors = ["red", "blue", "green"]
-
-for color in colors:
-    print(color)
-```
-
-Output:
-```
-red
-blue
-green
-```
-
-### Using `range()`
-
-`range(n)` creates a sequence of numbers from `0` to `n - 1`.
-
-```python copy
-for i in range(5):
-    print(i)
-```
-
-Output:
-```
-0
-1
-2
-3
-4
-```
-
-### Looping with an Index
-
-You can use `range()` with `len()` to loop through a list by index:
+A **`for` loop** repeats a block of code once for every item in a list. Once it reaches the end of the list, the loop stops automatically.
 
 ```python copy
 fruits = ["apple", "banana", "cherry"]
 
-for i in range(len(fruits)):
-    print(f"{i}: {fruits[i]}")
+for fruit in fruits:
+    print(fruit)
+
+print("Finished")
 ```
 
-Output:
-```
-0: apple
-1: banana
-2: cherry
-```
+**How it works:**
+1. Python takes the first item (`"apple"`) and assigns it to the variable `fruit`, then prints it.
+2. It moves to `"banana"`, updates `fruit`, and prints it.
+3. It moves to `"cherry"`, updates `fruit`, and prints it.
+4. Since no items remain, Python exits the loop and moves to the next line (`print("Finished")`).
 
-## While Loops
+💡 **Important:** Remember to indent the lines of code inside your loop!
 
-A **while loop** keeps running **as long as a condition is True**.
+---
+
+### While Loop
+
+A **`while` loop** continues to execute statements as long as its condition remains `True`.
 
 ```python copy
-count = 0
+timer = 3
 
-while count < 3:
-    print(f"Count is {count}")
-    count = count + 1
+while timer > 0:
+    print(timer)
+    timer = timer - 1
+
+print("Blast off!")
 ```
 
-Output:
-```
-Count is 0
-Count is 1
-Count is 2
-```
+**How it works:**
+1. `timer` starts at `3`.
+2. Python checks if `timer > 0`. Since `3 > 0` is `True`, it prints `3` and updates `timer` to `2`.
+3. It checks `2 > 0` (`True`), prints `2`, and updates `timer` to `1`.
+4. It checks `1 > 0` (`True`), prints `1`, and updates `timer` to `0`.
+5. Now `0 > 0` is `False`, so Python exits the loop and prints `"Blast off!"`.
 
-<Callout type="warning">
-Make sure the condition eventually becomes `False`, or the loop will run forever!
-</Callout>
+⚠️ **Beware of Infinite Loops:** If you forget to change the variable inside a `while` loop (like omitting `timer = timer - 1`), the condition will stay `True` forever and your program will crash!
 
-## Looping and Lists Together
+---
 
-Loops are especially useful with lists:
+## Challenges
 
-```python copy
-scores = [85, 92, 78]
-total = 0
+<Tabs items={['Beginner', 'Intermediate', 'Advanced']}>
+    <Tab>
+        ### Days of Creation Generator
+        In Genesis, God created the world step by step over six days before resting on the seventh. 
 
-for score in scores:
-    total = total + score
+        | Day | Creation |
+        | :--- | :--- |
+        | Day 1 | Light |
+        | Day 2 | Sky and Waters |
+        | Day 3 | Land and Plants |
+        | Day 4 | Sun, Moon, and Stars |
+        | Day 5 | Sea Creatures and Birds |
+        | Day 6 | Animals and Humanity |
 
-print(f"Total: {total}")
-print(f"Average: {total / len(scores)}")
-```
+        Write a Python program that iterates through a list of the 6 creation days using a `for` loop and prints each one.
 
-## Activity
+        **Requirements:**
+        1. Create a list called `creation_days` containing: `"Day 1: Light"`, `"Day 2: Sky"`, `"Day 3: Land & Plants"`, `"Day 4: Sun & Stars"`, `"Day 5: Birds & Fish"`, `"Day 6: Animals & Humans"`.
+        2. Use a `for` loop to print each item in the list.
+        3. After the loop, print `"Creation Complete!"`.
 
-Try writing a loop that prints your name 5 times, then one that prints every item in a list of your favorite foods!
+        **Expected Output:**
+        ```text
+        Day 1: Light
+        Day 2: Sky
+        Day 3: Land & Plants
+        Day 4: Sun & Stars
+        Day 5: Birds & Fish
+        Day 6: Animals & Humans
+        Creation Complete!
+        ```
 
-```python copy filename="loops.py"
-foods = ["pizza", "sushi", "tacos"]
+        <details>
+        <summary><b>View Solution</b></summary>
 
-for food in foods:
-    print(f"I love {food}!")
-```
-</div>
+        ```python copy
+        # Days of Creation Generator
+        creation_days = [
+            "Day 1: Light",
+            "Day 2: Sky",
+            "Day 3: Land & Plants",
+            "Day 4: Sun & Stars",
+            "Day 5: Birds & Fish",
+            "Day 6: Animals & Humans"
+        ]
+
+        for day in creation_days:
+            print(day)
+
+        print("Creation Complete!")
+        ```
+        </details>
+    </Tab>
+    <Tab>
+        ### Jericho March Countdown
+        The Bible records that God commanded Joshua and the Israelites to march around the walls of Jericho once a day for six days, and seven times on the seventh day before the walls fell.
+
+        Write a Python program using a `while` loop that counts down the remaining marching laps starting from 7 down to 1, and then prints a shouting message.
+
+        **Requirements:**
+        1. Initialize a variable `laps = 7`.
+        2. Use a `while` loop that runs while `laps > 0`.
+        3. Print `"Lap..."` along with the current lap number.
+        4. Decrement `laps` by `1` during each iteration.
+        5. After the loop, print `"Shout! The walls of Jericho have fallen!"`.
+
+        **Expected Output:**
+        ```text
+        Lap 7 complete!
+        Lap 6 complete!
+        Lap 5 complete!
+        Lap 4 complete!
+        Lap 3 complete!
+        Lap 2 complete!
+        Lap 1 complete!
+        Shout! The walls of Jericho have fallen!
+        ```
+
+        <details>
+        <summary><b>View Solution</b></summary>
+
+        ```python copy
+        # Jericho March Countdown
+        laps = 7
+
+        while laps > 0:
+            print(f"Lap {laps} complete!")
+            laps = laps - 1
+
+        print("Shout! The walls of Jericho have fallen!")
+        ```
+        </details>
+     </Tab>
+     <Tab>
+        ### Feeding of the 5,000 Basket Distributor
+        Write a Python program that simulates distributing 5 loaves of bread to a crowd. Using a `while` loop, ask the user how many loaves they want to hand out until all loaves are gone.
+
+        **Requirements:**
+        1. Start with `loaves = 5`.
+        2. Use a `while` loop that runs as long as `loaves > 0`.
+        3. Display the remaining number of loaves.
+        4. Prompt the user with `input()` asking how many loaves to give out.
+        5. Subtract that number from `loaves`.
+        6. When `loaves` reaches `0` (or fewer), exit the loop and print `"All loaves distributed!"`.
+
+        **Expected Output (example user interaction):**
+        ```text
+        Loaves remaining: 5
+        How many loaves to give out? 2
+        Loaves remaining: 3
+        How many loaves to give out? 3
+        All loaves distributed!
+        ```
+
+        <details>
+        <summary><b>View Solution</b></summary>
+
+        ```python copy
+        # Feeding of the 5,000 Basket Distributor
+        loaves = 5
+
+        while loaves > 0:
+            print(f"Loaves remaining: {loaves}")
+            given = int(input("How many loaves to give out? "))
+            loaves = loaves - given
+
+        print("All loaves distributed!")
+        ```
+        </details>
+    </Tab>
+</Tabs>
