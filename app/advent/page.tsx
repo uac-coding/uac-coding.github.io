@@ -116,7 +116,7 @@ export default function Page({
           <h1 className="festive-title title-text" style={styles.title}>
             Coming Soon <span style={styles.treeIcon}>🎄</span>
           </h1>
-          <p style={styles.subtitle}>Countdown to December 23<sup>rd</sup></p>
+          <p style={styles.subtitle}>🛠️ Still debugging, check back on December 23<sup>rd</sup>! 🎁</p>
 
           {timeLeft.isTargetReached ? (
             <div style={styles.celebration}>
@@ -163,7 +163,7 @@ const styles = {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    padding: '20px',
+    padding: '20px'
   },
   title: {
     color: '#d42426',
