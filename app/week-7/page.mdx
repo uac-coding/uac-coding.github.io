@@ -1,0 +1,225 @@
+# Week Seven
+
+This week we learn about **Functions** — reusable blocks of code designed to perform a specific task, allowing you to organize code and avoid repeating yourself.
+
+## Presentation
+
+<GoogleSlides comingSoon url="https://docs.google.com/presentation/d/1vl5rO2syURAo0qxVIKSB73AaIthYV-3B/pubembed"/>
+
+## Functions
+
+A **function** takes inputs, processes them, and can return an output. Think of a function like a recipe or a machine: you give it raw ingredients, and it produces a specific result every time you call it.
+
+Instead of duplicating identical logic across your program:
+```python copy
+print("Hello, Alex!")
+print("Hello, Jordan!")
+print("Hello, Taylor!")
+```
+
+We can define a function once and run it whenever needed!
+
+---
+
+### Defining & Calling a Function
+
+Use the `def` keyword to create a function, followed by its name, parentheses `()`, and a colon `:`. To execute the function later, **call** it by writing its name followed by `()`.
+
+```python copy
+def greet():
+    print("Welcome to Python class!")
+
+# Calling the function
+greet()
+```
+
+**How it works:**
+1. `def greet():` tells Python to store the instructions inside `greet`.
+2. `greet()` triggers those instructions to run.
+
+💡 **Important:** Code inside a function must be indented!
+
+---
+
+### Parameters and Arguments
+
+Functions can take inputs called **parameters**. When you call the function, you pass in values called **arguments**.
+
+```python copy
+def greet_person(name):
+    print(f"Hello, {name}!")
+
+greet_person("Daniel")
+greet_person("Esther")
+```
+
+**How it works:**
+1. When calling `greet_person("Daniel")`, `"Daniel"` is assigned to the parameter `name`.
+2. Python executes the print statement using that value.
+
+---
+
+### Return Values
+
+Functions can send a result back to the caller using the `return` statement. Once a function reaches `return`, it stops executing immediately and outputs the value.
+
+```python copy
+def add_numbers(a, b):
+    return a + b
+
+result = add_numbers(5, 7)
+print(f"Total: {result}")  # Output: Total: 12
+```
+
+---
+
+## Challenges
+
+<Tabs items={['Beginner', 'Intermediate', 'Advanced']}>
+    <Tab>
+        ### Priestly Blessing Printer (Numbers 6:24)
+        In **Numbers 6:24**, God instructs Aaron and his sons on how to bless the Israelites: *"The LORD bless you and keep you."*
+
+        Write a Python function called `bless_person` that takes a person's name as a parameter and prints that blessing addressed to them.
+
+        **Requirements:**
+        1. Define a function named `bless_person` that accepts one parameter: `name`.
+        2. Inside the function, print `"The LORD bless you and keep you, [name]!"`.
+        3. Call the function twice with two different names (e.g., `"Miriam"` and `"Aaron"`).
+
+        **Expected Output:**
+        ```text
+        The LORD bless you and keep you, Miriam!
+        The LORD bless you and keep you, Aaron!
+        ```
+
+        <details>
+        <summary><b>View Solution</b></summary>
+
+        ```python copy
+        # Priestly Blessing Printer (Numbers 6:24)
+        def bless_person(name):
+            print(f"The LORD bless you and keep you, {name}!")
+
+        bless_person("Miriam")
+        bless_person("Aaron")
+        ```
+        </details>
+    </Tab>
+    <Tab>
+        ### Manna Gathering Limit Checker (Exodus 16:16–20)
+        In **Exodus 16:16–18**, Moses instructs the Israelites to gather manna according to what each person can eat—one `omer` per person—and when measured, those who gathered more had no excess, and those who gathered less had no shortage.
+
+        Write a Python function called `count_excess_gatherers` that takes a list of gathered `omer` amounts (as decimals, such as `[1.0, 1.5, 0.5, 2.0, 1.0]`) and returns how many people gathered **more than** `1.0` omer.
+
+        **Requirements:**
+        1. Define a function named `count_excess_gatherers` that accepts one parameter: `amounts`.
+        2. Inside the function, use a counter variable starting at `0`, loop through `amounts`, and add `1` to the counter whenever an amount is greater than `1.0`.
+        3. Return the final count from the function.
+        4. Call `count_excess_gatherers` with `[1.0, 1.5, 0.5, 2.0, 1.0]` and print the result.
+
+        **Expected Output:**
+        ```text
+        People who gathered more than 1.0 omer: 2
+        ```
+
+        <details>
+        <summary><b>View Solution</b></summary>
+
+        ```python copy
+        # Manna Gathering Limit Checker (Exodus 16:16-20)
+        def count_excess_gatherers(amounts):
+            excess_count = 0
+            for amount in amounts:
+                if amount > 1.0:
+                    excess_count += 1
+            return excess_count
+
+        gathered = [1.0, 1.5, 0.5, 2.0, 1.0]
+        over_limit = count_excess_gatherers(gathered)
+        print(f"People who gathered more than 1.0 omer: {over_limit}")
+        ```
+        </details>
+     </Tab>
+    <Tab>
+        ### Solomon's Temple Treasure Inspector (1 Kings 7:51)
+        In **1 Kings 7:51**, King Solomon brings silver, gold, and sacred items into the treasuries of the Lord's temple.
+
+        Write a Python program that collects silver offerings in a `while` loop until the treasury reaches `500` shekels, uses a `get_total()` helper function with a `for` loop, and checks the treasury status with `if` / `elif` / `else`.
+
+        **Requirements:**
+        1. Write a helper function named `get_total` that accepts a list of numbers as a parameter:
+            * Create a variable `total = 0`.
+            * Use a `for` loop to add each number in the list to `total`.
+            * Return `total`.
+        2. Write a helper function named `check_status` that accepts `total_amount` as a parameter and returns a status message:
+            * If `total_amount >= 500`: return `"Temple treasury is full!"`
+            * Elif `total_amount >= 200`: return `"Temple treasury is half full!"`
+            * Else: return `"Temple treasury needs more silver!"`
+        3. Collect silver offerings using a `while` loop:
+            * Start with an empty list `offerings = []` and `total_silver = 0`.
+            * Keep looping while `total_silver < 500`:
+                * Ask the user for an offering amount with `input()`.
+                * Append the amount to `offerings`.
+                * Update `total_silver = get_total(offerings)`.
+                * Print the current amount (`total_silver`) on one line and the current status using `check_status(total_silver)` on the next line.
+        4. After the loop ends, print the list of offerings, the total silver collected, and the final treasury status.
+
+        **Expected Output (if user inputs 150, 100, then 250):**
+        $```text
+        Enter silver offering: 150
+        Current Amount: 150.0 shekels
+        Status: Temple treasury needs more silver!
+        Enter silver offering: 100
+        Current Amount: 250.0 shekels
+        Status: Temple treasury is half full!
+        Enter silver offering: 250
+        Current Amount: 500.0 shekels
+        Status: Temple treasury is full!
+
+        Offerings Collected: [150.0, 100.0, 250.0]
+        Total Silver: 500.0 shekels
+        Treasury Status: Temple treasury is full!
+        $```
+
+        <details>
+        <summary><b>View Solution</b></summary>
+        ```python copy
+        # Solomon's Temple Treasure Inspector (1 Kings 7:51)
+        def get_total(numbers):
+            total = 0
+            for amount in numbers:
+                total = total + amount
+            return total
+
+
+        def check_status(total_amount):
+            if total_amount >= 500:
+                return "Temple treasury is full!"
+            elif total_amount >= 200:
+                return "Temple treasury is half full!"
+            else:
+                return "Temple treasury needs more silver!"
+
+
+        offerings = []
+        total_silver = 0
+
+        while total_silver < 500:
+            amount = float(input("Enter silver offering: "))
+            if amount < 0:
+                print("Offerings cannot be negative!")
+            else:
+                offerings.append(amount)
+                total_silver = get_total(offerings)
+                print(f"Current Amount: {total_silver} shekels")
+                print(f"Status: {check_status(total_silver)}")
+
+        final_status = check_status(total_silver)
+        print(f"\nOfferings Collected: {offerings}")
+        print(f"Total Silver: {total_silver} shekels")
+        print(f"Treasury Status: {final_status}")
+        ```
+        </details>
+    </Tab>
+</Tabs>
